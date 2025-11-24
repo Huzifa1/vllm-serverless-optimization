@@ -19,7 +19,7 @@ model_a = "../models/llama3-3b"
 model_b = "../models/qwen2.5-3b"
 port_a = 8500
 port_b = 8501
-sleep_level = 1
+sleep_level = 2
 
 
 def start_server(sleep_enabled: str, model: str) -> int:

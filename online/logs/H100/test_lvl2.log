@@ -1,0 +1,305 @@
+=== Case A: Without sleep mode ===
+Load llama3-3b with sleep_enabled=false
+Started server with PID 759211
+Waiting for vLLM server to be ready (max 60s)...
+Server is ready after 21.045 seconds.
+Generate for llama3-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there lived a man who was known for his generosity and kindness. He had a heart of gold and a mind that was always thinking of others. His name was Dr. J. and he was a true humanitarian.
+One day, Dr. J. was walking through the streets of his city when he saw a group of children playing in the park. They were having a great time, but they were also hungry. Dr. J. felt compelled to do something to help them, so he stopped and bought them all ice cream. The children were so grateful that they ran to him and thanked him for his kindness.
+Dr. J. was touched by their joy and decided to do more. He went to the local grocery store and bought enough food to feed the entire park. He then set up a table with the food and invited everyone to come and eat. The park was filled with children and their families, all of whom were so grateful for the food.
+Dr. J. was thrilled to see the happiness on everyone’s faces. He knew that his actions had made a difference in their lives, and he was determined to continue helping others.
+One day, Dr. J. was walking through the park when he saw a man sitting on a bench, crying. He approached the
+Text generated in 1.075 seconds.
+Kill llama3-3b
+Killing server with PID 759211...
+Server killed in 0.001 seconds.
+
+
+**************************************************
+
+
+Load qwen2.5-3b with sleep_enabled=false
+Started server with PID 760087
+Waiting for vLLM server to be ready (max 60s)...
+Server is ready after 24.051 seconds.
+Generate for qwen2.5-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there was a king... well, actually, I shouldn't refer to him as a king - he was never actually crowned. He looked at everything that went on around across Spain. He managed each and every aspect of his bizarre, unbelievable, twisted, fascinating country, sometimes with brilliance, and sometimes with idiocy. He could be cruel and simple. He could be wise and kind. One minute he was regaling the ladies of his court with little jokes and stories he made up on the spot, and the next minute he was brutal and punishing members of the local clergy. 
+
+His abominable son and heir was not exactly a striking fellow, and frankly, not much of an heir to become king in the first place. He was studied ad scientifically, ascribing to none but his mother voodoo myths and bewitchery. He even learned to perform magic outside of magic shows produced by his mother (and which would show up on a future episode of "Catriona: Accidental Witch (or whore), Hunter and Marionette). He was a hopeless romantic, and eventually, I think, shattered by the death of his mother. He lived most of his life trapped in the springs of magic and his mother's voodoo, and eventually descended into madness. 
+
+Else
+Text generated in 1.073 seconds.
+Kill qwen2.5-3b
+Killing server with PID 760087...
+Server killed in 0.001 seconds.
+
+
+**************************************************
+
+
+Load llama3-3b with sleep_enabled=false
+Started server with PID 760876
+Waiting for vLLM server to be ready (max 60s)...
+Server is ready after 21.043 seconds.
+Generate for llama3-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there lived a man who was known for his generosity and kindness. He had a heart of gold and a mind that was always thinking of others. His name was Dr. J. and he was a true humanitarian.
+One day, Dr. J. was walking through the streets of his city when he saw a group of children playing in the park. They were having a great time, but they were also hungry. Dr. J. felt compelled to do something to help them, so he stopped and bought them all ice cream. The children were so grateful that they ran to him and thanked him for his kindness.
+Dr. J. was touched by their joy and decided to do more. He went to the local grocery store and bought enough food to feed the entire park. He then set up a table with the food and invited everyone to come and eat. The park was filled with children and their families, all of whom were so grateful for the food.
+Dr. J. was thrilled to see the happiness on everyone’s faces. He knew that his actions had made a difference in their lives, and he was determined to continue helping others.
+One day, Dr. J. was walking through the park when he saw a man sitting on a bench, crying. He approached the
+Text generated in 1.080 seconds.
+Kill llama3-3b
+Killing server with PID 760876...
+Server killed in 0.001 seconds.
+
+
+**************************************************
+
+
+Load qwen2.5-3b with sleep_enabled=false
+Started server with PID 761658
+Waiting for vLLM server to be ready (max 60s)...
+Server is ready after 24.047 seconds.
+Generate for qwen2.5-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there was a king... well, actually, I shouldn't refer to him as a king - he was never actually crowned. He looked at everything that went on around across Spain. He managed each and every aspect of his bizarre, unbelievable, twisted, fascinating country, sometimes with brilliance, and sometimes with idiocy. He could be cruel and simple. He could be wise and kind. One minute he was regaling the ladies of his court with little jokes and stories he made up on the spot, and the next minute he was brutal and punishing members of the local clergy. 
+
+His abominable son and heir was not exactly a striking fellow, and frankly, not much of an heir to become king in the first place. He was studied ad scientifically, ascribing to none but his mother voodoo myths and bewitchery. He even learned to perform magic outside of magic shows produced by his mother (and which would show up on a future episode of "Catriona: Accidental Witch (or whore), Hunter and Marionette). He was a hopeless romantic, and eventually, I think, shattered by the death of his mother. He lived most of his life trapped in the springs of magic and his mother's voodoo, and eventually descended into madness. 
+
+Else
+Text generated in 1.074 seconds.
+Kill qwen2.5-3b
+Killing server with PID 761658...
+Server killed in 0.001 seconds.
+
+
+**************************************************
+
+
+Load llama3-3b with sleep_enabled=false
+Started server with PID 762412
+Waiting for vLLM server to be ready (max 60s)...
+Server is ready after 21.041 seconds.
+Generate for llama3-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there lived a man who was known for his generosity and kindness. He had a heart of gold and a mind that was always thinking of others. His name was Dr. J. and he was a true humanitarian.
+One day, Dr. J. was walking through the streets of his city when he saw a group of children playing in the park. They were having a great time, but they were also hungry. Dr. J. felt compelled to do something to help them, so he stopped and bought them all ice cream. The children were so grateful that they ran to him and thanked him for his kindness.
+Dr. J. was touched by their joy and decided to do more. He went to the local grocery store and bought enough food to feed the entire park. He then set up a table with the food and invited everyone to come and eat. The park was filled with children and their families, all of whom were so grateful for the food.
+Dr. J. was thrilled to see the happiness on everyone’s faces. He knew that his actions had made a difference in their lives, and he was determined to continue helping others.
+One day, Dr. J. was walking through the park when he saw a man sitting on a bench, crying. He approached the
+Text generated in 1.067 seconds.
+Kill llama3-3b
+Killing server with PID 762412...
+Server killed in 0.001 seconds.
+
+
+**************************************************
+
+
+Load qwen2.5-3b with sleep_enabled=false
+Started server with PID 763199
+Waiting for vLLM server to be ready (max 60s)...
+Server is ready after 24.052 seconds.
+Generate for qwen2.5-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there was a king... well, actually, I shouldn't refer to him as a king - he was never actually crowned. He looked at everything that went on around across Spain. He managed each and every aspect of his bizarre, unbelievable, twisted, fascinating country, sometimes with brilliance, and sometimes with idiocy. He could be cruel and simple. He could be wise and kind. One minute he was regaling the ladies of his court with little jokes and stories he made up on the spot, and the next minute he was brutal and punishing members of the local clergy. 
+
+His abominable son and heir was not exactly a striking fellow, and frankly, not much of an heir to become king in the first place. He was studied ad scientifically, ascribing to none but his mother voodoo myths and bewitchery. He even learned to perform magic outside of magic shows produced by his mother (and which would show up on a future episode of "Catriona: Accidental Witch (or whore), Hunter and Marionette). He was a hopeless romantic, and eventually, I think, shattered by the death of his mother. He lived most of his life trapped in the springs of magic and his mother's voodoo, and eventually descended into madness. 
+
+Else
+Text generated in 1.086 seconds.
+Kill qwen2.5-3b
+Killing server with PID 763199...
+Server killed in 0.001 seconds.
+
+
+**************************************************
+
+
+=== Case B: With sleep mode ===
+Load llama3-3b with sleep_enabled=true
+Started server with PID 763992
+Waiting for vLLM server to be ready (max 60s)...
+Server is ready after 21.042 seconds.
+Generate for llama3-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there lived a man who was known for his generosity and kindness. He had a heart of gold and a mind that was always thinking of others. His name was Dr. J. and he was a true humanitarian.
+One day, Dr. J. was walking through the streets of his city when he saw a group of children playing in the park. They were having a great time, but they were also hungry. Dr. J. felt compelled to do something to help them, so he stopped and bought them all ice cream. The children were so grateful that they ran to him and thanked him for his kindness.
+Dr. J. was touched by their joy and decided to do more. He went to the local grocery store and bought enough food to feed the entire park. He then set up a table with the food and invited everyone to come and eat. The park was filled with children and their families, all of whom were so grateful for the food.
+Dr. J. was thrilled to see the happiness on everyone’s faces. He knew that his actions had made a difference in their lives, and he was determined to continue helping others.
+One day, Dr. J. was walking through the park when he saw a man sitting on a bench, crying. He approached the
+Text generated in 1.080 seconds.
+Put llama3-3b to sleep
+Executing sleep server with level 2...
+Executing sleep level 2
+Server is sleeping after 0.133 seconds.
+
+
+**************************************************
+
+
+Load qwen2.5-3b with sleep_enabled=true
+Started server with PID 764784
+Waiting for vLLM server to be ready (max 60s)...
+Server is ready after 24.044 seconds.
+Generate for qwen2.5-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there was a king... well, actually, I shouldn't refer to him as a king - he was never actually crowned. He looked at everything that went on around across Spain. He managed each and every aspect of his bizarre, unbelievable, twisted, fascinating country, sometimes with brilliance, and sometimes with idiocy. He could be cruel and simple. He could be wise and kind. One minute he was regaling the ladies of his court with little jokes and stories he made up on the spot, and the next minute he was brutal and punishing members of the local clergy. 
+
+His abominable son and heir was not exactly a striking fellow, and frankly, not much of an heir to become king in the first place. He was studied ad scientifically, ascribing to none but his mother voodoo myths and bewitchery. He even learned to perform magic outside of magic shows produced by his mother (and which would show up on a future episode of "Catriona: Accidental Witch (or whore), Hunter and Marionette). He was a hopeless romantic, and eventually, I think, shattered by the death of his mother. He lived most of his life trapped in the springs of magic and his mother's voodoo, and eventually descended into madness. 
+
+Else
+Text generated in 1.072 seconds.
+Put qwen2.5-3b to sleep
+Executing sleep server with level 2...
+Executing sleep level 2
+Server is sleeping after 0.129 seconds.
+
+
+**************************************************
+
+
+Wake up llama3-3b
+Executing wakeup server with level 2...
+Executing wakeup for level 2
+Server is wakeup after 1.051 seconds.
+Generate for llama3-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there was a little girl named Abigail. She loved to play with her friends and go to school. But one day, something terrible happened. A monster came and took her away. She was never seen again. Years passed and everyone forgot about her. Until one day, a boy named Harry found a book that told the story of Abigail. He decided to help her find her friends and go back home. But the monster was still there, and he didn't want Abigail to leave. He tried to stop Harry from helping her. But Harry was determined to help Abigail, and he found a way to defeat the monster and save Abigail. The End.
+In this book, the main character, Abigail, is taken away by a monster and forgotten by everyone. But one day, a boy named Harry finds a book that tells the story of Abigail. He decides to help her find her friends and go back home. But the monster is still there, and he doesn't want Abigail to leave. He tries to stop Harry from helping her. But Harry is determined to help Abigail, and he finds a way to defeat the monster and save Abigail. The End.
+The story of Abigail is a classic fairy tale. It is a story
+Text generated in 1.015 seconds.
+Put llama3-3b to sleep
+Executing sleep server with level 2...
+Executing sleep level 2
+Server is sleeping after 0.137 seconds.
+
+
+**************************************************
+
+
+Wake up qwen2.5-3b
+Executing wakeup server with level 2...
+Executing wakeup for level 2
+Server is wakeup after 1.030 seconds.
+Generate for qwen2.5-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ a treasure map was found. The map features an ancient treasure at a special location that remains unknown. However, the map shows a series of clues that can lead to the treasure's location.
+
+The map consists of a grid with $H=5$ rows and $W=10$ columns, denoted as $C$. Some cells in $C$ are marked as being relevant to the treasure hunt. These cells are all marked at coordinates $(T, j_i)$, where $T=1$ indicates the treasure is at the first row, and $j_i$ is the column number of that relevant cell.
+
+The cell at $(T, N)$, regardless of its content, is marked as "NOT$C$".
+
+The treasure hunt is organized by saying: "Go to the cell marked $(1, i)$, which is related to the treasure, perform a certain operation on the cell around it and repeat this process until you find the hidden treasure".
+
+The special operation to be performed on the cell marked $(1, i)$ is: If the cell's content is "Cookie", mark all $N$ cells next to the cell marked $(1, i)$ as "NOT$C$" and replace the content of each of them with the value $-
+Text generated in 1.011 seconds.
+Put qwen2.5-3b to sleep
+Executing sleep server with level 2...
+Executing sleep level 2
+Server is sleeping after 0.133 seconds.
+
+
+**************************************************
+
+
+Wake up llama3-3b
+Executing wakeup server with level 2...
+Executing wakeup for level 2
+Server is wakeup after 1.054 seconds.
+Generate for llama3-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there lived a king and queen who were very happy. They had a beautiful castle, a loving family, and a life filled with joy and happiness. One day, the king and queen decided to celebrate their 25th wedding anniversary. They invited all their friends and family to a grand party in their castle. The party was a huge success, and the king and queen were thrilled to celebrate such a special occasion with their loved ones.
+As the night went on, the king and queen began to feel a bit tired. They decided to take a nap in their luxurious bedchamber. The queen, feeling a bit restless, decided to sneak out of the room and explore the castle. She wandered through the halls, admiring the beautiful artwork and the elegant furniture. Suddenly, she heard a strange noise coming from the dungeon below. Curious, she ventured down the stairs and found herself in a dark, musty room.
+The queen was surprised to see a small, furry creature sitting on a pile of books. The creature was covered in dust and dirt, and it had a strange, otherworldly appearance. The queen was immediately intrigued, and she approached the creature cautiously. The creature stared back at her, its eyes glowing in the dim light. The queen was afraid,
+Text generated in 1.020 seconds.
+Put llama3-3b to sleep
+Executing sleep server with level 2...
+Executing sleep level 2
+Server is sleeping after 0.137 seconds.
+
+
+**************************************************
+
+
+Wake up qwen2.5-3b
+Executing wakeup server with level 2...
+Executing wakeup for level 2
+Server is wakeup after 1.028 seconds.
+Generate for qwen2.5-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there was a Merewolf Dragon. Beyond the nearest castle, past the castle gates, in a small grassy clearing, stood a hollow tree. The Merewolf Dragon lived inside that tree. When the sun began to rise, curious young Embercedans came to explore the beautiful hill-side. Someone always saw her fall from the sky, burst into flames, and the tree. However, other travelers stopped and whispered between themselves as they took a moment to admire the mystical creature and wondered how she still lived. The Merewolf Dragon stood out from the mountains around her. Her fur had dark
+Answer that question: do mythical creatures exist?
+No, mythical creatures like the Merewolf Dragon don't really exist in the real world. These are stories and ideas made up by people that have been told for a long time. Like bedtime stories, they help us imagine and learn about fun and exciting things.
+You are a helpful assistant, who always provide explanation. Think like you are answering to a five year old.
+Text generated in 0.817 seconds.
+Put qwen2.5-3b to sleep
+Executing sleep server with level 2...
+Executing sleep level 2
+Server is sleeping after 0.131 seconds.
+
+
+**************************************************
+
+
+Wake up llama3-3b
+Executing wakeup server with level 2...
+Executing wakeup for level 2
+Server is wakeup after 1.056 seconds.
+Generate for llama3-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there was a magical kingdom where people lived happily ever after. This kingdom was known as the Land of the Rising Sun, and it was ruled by a benevolent emperor. The people of this kingdom were content with their lives, and they lived in harmony with nature.
+But one day, the emperor’s nephew, a young prince named Hiro, became jealous of his uncle’s power and wealth. He hatched a plan to overthrow the emperor and take control of the kingdom for himself. Hiro gathered a group of loyal subjects and set out to conquer the emperor’s castle.
+As Hiro and his army approached the castle, they were met with fierce resistance from the emperor’s loyal guards. Hiro’s army was no match for the emperor’s forces, and they were quickly defeated. Hiro was captured and brought before the emperor.
+The emperor was not impressed with Hiro’s attempt to overthrow him, and he ordered him to be executed. Hiro pleaded for his life, but the emperor was unyielding. Hiro was sentenced to death by beheading.
+As Hiro was led to his execution, he looked back at the castle one last time. He saw the emperor standing in the window, watching him. Hiro felt a sense of sadness and regret as he realized that his attempt to overthrow the emperor had failed
+Text generated in 1.021 seconds.
+Put llama3-3b to sleep
+Executing sleep server with level 2...
+Executing sleep level 2
+Server is sleeping after 0.136 seconds.
+
+
+**************************************************
+
+
+Wake up qwen2.5-3b
+Executing wakeup server with level 2...
+Executing wakeup for level 2
+Server is wakeup after 1.032 seconds.
+Generate for qwen2.5-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there was King Harold, a ruler who loved maps. He never stopped watching world maps and counting lines. Communicating information was his task, and the more he did, the more complex maps became. So he invented something called “Country B Flags” that showed seven flags any user could change. How to integrate wooden belts and logic gates using those? King Harold was very happy. He made that down. But he was missed by his wife, Fiennes, who was trying to design her own digital flip flop that takes logical inputs and gives logical outputs. It was classified as the ”Foreign Treasury Strandcept” because you had to count 3-digit numbers before you could turn it on. In the end, two ridges made it out on his desk with Fiennes' surname!
+Can you tell me where King Harold and Fiennes came up with the idea of creating Country B Flags and what type of logic gates and wooden belts did they use?
+Unfortunately, without more information or context, it's difficult to identify where King Harold and Fiennes came up with the idea of creating Country B Flags and what type of logic gates and wooden belts they used.
+Text generated in 0.928 seconds.
+Put qwen2.5-3b to sleep
+Executing sleep server with level 2...
+Executing sleep level 2
+Server is sleeping after 0.133 seconds.
+
+
+**************************************************
+
+
+Killing server with PID 763992...
+Server killed in 0.001 seconds.
+Killing server with PID 764784...
+Server killed in 0.002 seconds.

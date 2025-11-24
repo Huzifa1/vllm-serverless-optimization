@@ -30,11 +30,6 @@ dist/
 *.manifest
 *.spec
 
-# Logs and Debugging
-logs/
-*.log
-debug.log
-
 # IDE and Editor files
 .vscode/
 .idea/

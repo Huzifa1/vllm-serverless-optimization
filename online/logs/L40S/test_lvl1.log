@@ -1,0 +1,294 @@
+=== Case A: Without sleep mode ===
+Load llama3-3b with sleep_enabled=false
+Started server with PID 1779995
+Waiting for vLLM server to be ready (max 60s)...
+Server is ready after 21.039 seconds.
+Generate for llama3-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there lived a man who was known for his generosity and kindness. He had a heart of gold and a mind that was always thinking of others. One day, he met a young girl who was struggling to make ends meet. She was a hard worker, but her income was not enough to cover her basic needs. The man felt sorry for her and decided to do something about it. He went to the bank and opened a savings account for her, promising to deposit money every month. He also gave her some advice on how to save and invest wisely. The young girl was overjoyed at the thought of having a secure future. She promised to take care of the account and use the money only for good causes. Soon, the man's generosity spread like wildfire. People started to notice his kindness and started to ask for help. He opened accounts for them too, and they all promised to repay him with interest. The man's heart was filled with joy and gratitude. He knew that he was doing the right thing, and he felt blessed to be able to help others. As time passed, the man's generosity grew even more. He opened more accounts and gave more advice to those who asked for it. He became a beacon of hope and inspiration to many. The young
+Text generated in 2.738 seconds.
+Kill llama3-3b
+Killing server with PID 1779995...
+Server killed in 0.001 seconds.
+
+
+**************************************************
+
+
+Load qwen2.5-3b with sleep_enabled=false
+Started server with PID 1780546
+Waiting for vLLM server to be ready (max 60s)...
+Server is ready after 52.103 seconds.
+Generate for qwen2.5-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there was a king... well, actually, I shouldn't refer to him as a king - he was never actually crowned. He looked at everything that went on around across Spain. He managed each and every aspect of the bizarre, unbelievable, twisted, fascinating and, sometimes, astonishing world he saw everywhere. And at the heart of everything was simple. To want to create a piece of art that could be enjoyed while being fun for someone without being confusing. To warn someone who is both an enthusiast and a true expert on art that the next thing could be very bad. Here begins the tale of one of ETA's funniest (and, in a way, smartest) pieces of consumer-grade art leading to a more serious piece of art. 
+
+The Cava jacket, surrounded by a glorious vial of Aqua Alta, amazing packaging, but a fashion in Spain outside of fashion that was a bit odd (and which would show up on a Main Street USA troll-trap). Just before this, I wrote about marketing to copiers that were so loyal that they weren't cleverly marketed, only well marketed. This was an example of that. Over two decades later, this Shark Wallet springs to mind. Why don't I send people HANDS of Chanel handbags to buy
+Text generated in 2.819 seconds.
+Kill qwen2.5-3b
+Killing server with PID 1780546...
+Server killed in 0.001 seconds.
+
+
+**************************************************
+
+
+Load llama3-3b with sleep_enabled=false
+Started server with PID 1781423
+Waiting for vLLM server to be ready (max 60s)...
+Server is ready after 21.043 seconds.
+Generate for llama3-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there lived a man who was known for his generosity and kindness. He had a heart of gold and a mind that was always thinking of others. One day, he met a young girl who was struggling to make ends meet. She was a hard worker, but her income was not enough to cover her basic needs. The man felt sorry for her and decided to do something about it. He went to the bank and opened a savings account for her, promising to deposit money every month. He also gave her some advice on how to save and invest wisely. The young girl was overjoyed at the thought of having a secure future. She promised to take care of the account and use the money only for good causes. Soon, the man's generosity spread like wildfire. People started to notice his kindness and started to ask for help. He opened accounts for them too, and they all promised to repay him with interest. The man's heart was filled with joy and gratitude. He knew that he was doing the right thing, and he felt blessed to be able to help others. As time passed, the man's generosity grew even more. He opened more accounts and gave more advice to those who asked for it. He became a beacon of hope and inspiration to many. The young
+Text generated in 2.739 seconds.
+Kill llama3-3b
+Killing server with PID 1781423...
+Server killed in 0.001 seconds.
+
+
+**************************************************
+
+
+Load qwen2.5-3b with sleep_enabled=false
+Started server with PID 1781925
+Waiting for vLLM server to be ready (max 60s)...
+Server is ready after 23.046 seconds.
+Generate for qwen2.5-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there was a king... well, actually, I shouldn't refer to him as a king - he was never actually crowned. He looked at everything that went on around across Spain. He managed each and every aspect of the bizarre, unbelievable, twisted, fascinating and, sometimes, astonishing world he saw everywhere. And at the heart of everything was simple. To want to create a piece of art that could be enjoyed while being fun for someone without being confusing. To warn someone who is both an enthusiast and a true expert on art that the next thing could be very bad. Here begins the tale of one of ETA's funniest (and, in a way, smartest) pieces of consumer-grade art leading to a more serious piece of art. 
+
+The Cava jacket, surrounded by a glorious vial of Aqua Alta, amazing packaging, but a fashion in Spain outside of fashion that was a bit odd (and which would show up on a Main Street USA troll-trap). Just before this, I wrote about marketing to copiers that were so loyal that they weren't cleverly marketed, only well marketed. This was an example of that. Over two decades later, this Shark Wallet springs to mind. Why don't I send people HANDS of Chanel handbags to buy
+Text generated in 2.817 seconds.
+Kill qwen2.5-3b
+Killing server with PID 1781925...
+Server killed in 0.002 seconds.
+
+
+**************************************************
+
+
+Load llama3-3b with sleep_enabled=false
+Started server with PID 1782739
+Waiting for vLLM server to be ready (max 60s)...
+Server is ready after 21.046 seconds.
+Generate for llama3-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there lived a man who was known for his generosity and kindness. He had a heart of gold and a mind that was always thinking of others. One day, he met a young girl who was struggling to make ends meet. She was a hard worker, but her income was not enough to cover her basic needs. The man felt sorry for her and decided to do something about it. He went to the bank and opened a savings account for her, promising to deposit money every month. He also gave her some advice on how to save and invest wisely. The young girl was overjoyed at the thought of having a secure future. She promised to take care of the account and use the money only for good causes. Soon, the man's generosity spread like wildfire. People started to notice his kindness and started to ask for help. He opened accounts for them too, and they all promised to repay him with interest. The man's heart was filled with joy and gratitude. He knew that he was doing the right thing, and he felt blessed to be able to help others. As time passed, the man's generosity grew even more. He opened more accounts and gave more advice to those who asked for it. He became a beacon of hope and inspiration to many. The young
+Text generated in 2.741 seconds.
+Kill llama3-3b
+Killing server with PID 1782739...
+Server killed in 0.000 seconds.
+
+
+**************************************************
+
+
+Load qwen2.5-3b with sleep_enabled=false
+Started server with PID 1783249
+Waiting for vLLM server to be ready (max 60s)...
+Server is ready after 23.048 seconds.
+Generate for qwen2.5-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there was a king... well, actually, I shouldn't refer to him as a king - he was never actually crowned. He looked at everything that went on around across Spain. He managed each and every aspect of the bizarre, unbelievable, twisted, fascinating and, sometimes, astonishing world he saw everywhere. And at the heart of everything was simple. To want to create a piece of art that could be enjoyed while being fun for someone without being confusing. To warn someone who is both an enthusiast and a true expert on art that the next thing could be very bad. Here begins the tale of one of ETA's funniest (and, in a way, smartest) pieces of consumer-grade art leading to a more serious piece of art. 
+
+The Cava jacket, surrounded by a glorious vial of Aqua Alta, amazing packaging, but a fashion in Spain outside of fashion that was a bit odd (and which would show up on a Main Street USA troll-trap). Just before this, I wrote about marketing to copiers that were so loyal that they weren't cleverly marketed, only well marketed. This was an example of that. Over two decades later, this Shark Wallet springs to mind. Why don't I send people HANDS of Chanel handbags to buy
+Text generated in 2.821 seconds.
+Kill qwen2.5-3b
+Killing server with PID 1783249...
+Server killed in 0.001 seconds.
+
+
+**************************************************
+
+
+=== Case B: With sleep mode ===
+Load llama3-3b with sleep_enabled=true
+Started server with PID 1783753
+Waiting for vLLM server to be ready (max 60s)...
+Server is ready after 21.046 seconds.
+Generate for llama3-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there lived a man who was known for his generosity and kindness. He had a heart of gold and a mind that was always thinking of others. One day, he met a young girl who was struggling to make ends meet. She was a hard worker, but her income was not enough to cover her basic needs. The man felt sorry for her and decided to do something about it. He went to the bank and opened a savings account for her, promising to deposit money every month. He also gave her some advice on how to save and invest wisely. The young girl was overjoyed at the thought of having a secure future. She promised to take care of the account and use the money only for good causes. Soon, the man's generosity spread like wildfire. People started to notice his kindness and started to ask for help. He opened accounts for them too, and they all promised to repay him with interest. The man's heart was filled with joy and gratitude. He knew that he was doing the right thing, and he felt blessed to be able to help others. As time passed, the man's generosity grew even more. He opened more accounts and gave more advice to those who asked for it. He became a beacon of hope and inspiration to many. The young
+Text generated in 2.739 seconds.
+Put llama3-3b to sleep
+Executing sleep server with level 1...
+Executing sleep level 1
+Server is sleeping after 3.829 seconds.
+
+
+**************************************************
+
+
+Load qwen2.5-3b with sleep_enabled=true
+Started server with PID 1784283
+Waiting for vLLM server to be ready (max 60s)...
+Server is ready after 23.049 seconds.
+Generate for qwen2.5-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there was a king... well, actually, I shouldn't refer to him as a king - he was never actually crowned. He looked at everything that went on around across Spain. He managed each and every aspect of the bizarre, unbelievable, twisted, fascinating and, sometimes, astonishing world he saw everywhere. And at the heart of everything was simple. To want to create a piece of art that could be enjoyed while being fun for someone without being confusing. To warn someone who is both an enthusiast and a true expert on art that the next thing could be very bad. Here begins the tale of one of ETA's funniest (and, in a way, smartest) pieces of consumer-grade art leading to a more serious piece of art. 
+
+The Cava jacket, surrounded by a glorious vial of Aqua Alta, amazing packaging, but a fashion in Spain outside of fashion that was a bit odd (and which would show up on a Main Street USA troll-trap). Just before this, I wrote about marketing to copiers that were so loyal that they weren't cleverly marketed, only well marketed. This was an example of that. Over two decades later, this Shark Wallet springs to mind. Why don't I send people HANDS of Chanel handbags to buy
+Text generated in 2.810 seconds.
+Put qwen2.5-3b to sleep
+Executing sleep server with level 1...
+Executing sleep level 1
+Server is sleeping after 4.183 seconds.
+
+
+**************************************************
+
+
+Wake up llama3-3b
+Executing wakeup server with level 1...
+Executing wakeup for level 1
+Server is wakeup after 0.824 seconds.
+Generate for llama3-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there was a little girl named Abigail. She loved to play with her friends and go to school. But one day, something terrible happened. A monster came and took her away. She was never seen again.
+But then, one day, a hero came along. His name was The Mighty Morphing Power Rangers. He had a magic sword that could turn him into a mighty warrior. He used his sword to fight the monster and save Abigail.
+The story of Abigail and the Mighty Morphing Power Rangers is a classic tale of good versus evil. It’s a story that has been told and retold for generations. And it’s a story that still resonates with people today.
+So, if you’re looking for a fun and exciting story to read, look no further than Abigail and the Mighty Morphing Power Rangers. This is a story that will have you on the edge of your seat from start to finish.
+What is the story of Abigail and the Mighty Morphing Power Rangers?
+The story of Abigail and the Mighty Morphing Power Rangers is a classic tale of good versus evil. It’s a story that has been told and retold for generations. And it’s a story that still resonates with people today.
+The story begins with a little
+Text generated in 2.732 seconds.
+Put llama3-3b to sleep
+Executing sleep server with level 1...
+Executing sleep level 1
+Server is sleeping after 0.411 seconds.
+
+
+**************************************************
+
+
+Wake up qwen2.5-3b
+Executing wakeup server with level 1...
+Executing wakeup for level 1
+Server is wakeup after 0.856 seconds.
+Generate for qwen2.5-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ a treasure map was found. The map features an ancient treasure at a special location that remains unknown. However, the map shows a series of clues that can lead to the treasure's location.
+
+The map consists of a grid with $H=5$ rows and $W=10$ columns, denoted as $C$. Some cells in $C$ are marked as being relevant to the treasure hunt. These cells are all marked at coordinates $(T, j_i)$, where $T=1$ indicates the treasure is at the first row, and $j_i$ is the column number of that relevant cell.
+
+The cell at $(T, N)$, regardless of its content, is marked as "NOT$C$".
+
+The treasure hunt is organized by saying: "Go to the cell marked $(1, i)$, which is related to the treasure, perform a certain operation on the cell around it and repeat this process until you find the hidden treasure".
+
+The special operation to be performed on the cell marked $(1, i)$ is: If the cell's content is "Cookie", mark all $N$ cells next to the cell marked $(1, i)$ as "NOT$C$" and replace the content of each of them with the value $-
+Text generated in 2.809 seconds.
+Put qwen2.5-3b to sleep
+Executing sleep server with level 1...
+Executing sleep level 1
+Server is sleeping after 0.423 seconds.
+
+
+**************************************************
+
+
+Wake up llama3-3b
+Executing wakeup server with level 1...
+Executing wakeup for level 1
+Server is wakeup after 0.822 seconds.
+Generate for llama3-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there lived a brave and noble king named King Arthur. He was a mighty warrior who led his people to victory in many battles. But one day, a dark and mysterious force threatened to destroy the kingdom. The evil wizard Mordred had summoned a powerful army of demons from the underworld, and they were on the brink of invading the land.
+King Arthur knew that he could not face this threat alone. He needed the help of a mighty wizard who could defeat the demons and restore peace to the kingdom. So he set out on a quest to find the most powerful wizard in the land. He traveled to many lands, seeking out the wisest and most skilled wizards he could find.
+Finally, King Arthur came to a small village where he met an old man who lived in a humble cottage. The old man was known as Merlin, and he was said to be the most powerful wizard in all the land. King Arthur asked Merlin to help him in his quest, and Merlin agreed.
+Together, King Arthur and Merlin set out on a journey to the underworld. They traveled through dark and dangerous forests, and they faced many challenges along the way. But finally, they reached the entrance to the underworld, and they faced the demons head-on.
+Merlin used his magical powers to summon
+Text generated in 2.733 seconds.
+Put llama3-3b to sleep
+Executing sleep server with level 1...
+Executing sleep level 1
+Server is sleeping after 0.411 seconds.
+
+
+**************************************************
+
+
+Wake up qwen2.5-3b
+Executing wakeup server with level 1...
+Executing wakeup for level 1
+Server is wakeup after 0.833 seconds.
+Generate for qwen2.5-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there was a Mermaid Dragon named Serine that lived in the lazy stream. She was patient, gentle and kind. Many animals lived by the stream, and all of them enjoyed the cool water and beautiful scenery of their little kingdom. In this kingdom lives a Butcher Bear called Loki. Loki is a friendly fall-guy who loves entertaining people. Sometimes he pulls little pranks and other comical stunts. And others, he is rather disastrous, as when he accidentally broke Fred Flinstone's fist in "Who Framed Roger Rabbit".
+Loki has three simple goals in
+life that are to follow: 1) eat, 2) work in his little chocolate factory, which he describes as: "fairzing easy chocolate", 3) and 4) train, practice, and do all the creative, amazing, cool things that poke for fun at people's disbelief. He is a doer, and he loves to see people change their thinking about something to have fun. It is often very evident in Loki's dreams, but always not very obvious. Often home-made Ikea furniture becomes the main cast of his dreams, or sometimes some aspiring artists meet and do an improv show of some sort.
+Loki dreams about "Danvers"
+occasionally too
+Text generated in 2.803 seconds.
+Put qwen2.5-3b to sleep
+Executing sleep server with level 1...
+Executing sleep level 1
+Server is sleeping after 0.420 seconds.
+
+
+**************************************************
+
+
+Wake up llama3-3b
+Executing wakeup server with level 1...
+Executing wakeup for level 1
+Server is wakeup after 0.830 seconds.
+Generate for llama3-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there was a magical kingdom where people lived happily ever after. This kingdom was known as the Land of the Rising Sun, and it was ruled by a benevolent emperor.
+One day, a band of evil sorcerers from a neighboring kingdom decided to attack the Land of the Rising Sun. They knew that the emperor was a powerful wizard and could protect his people from harm. However, the sorcerers also knew that the emperor had a weakness: he was addicted to a powerful magic potion that he used to keep himself young and strong.
+The sorcerers decided to use this weakness against the emperor. They created a magical potion that would turn the emperor into a mere mortal, and they sent their best sorcerer to the Land of the Rising Sun to administer the potion.
+The sorcerer arrived at the emperor’s palace and presented himself as a humble servant. He told the emperor that he had come to offer his services as a personal assistant. The emperor, who was always eager to please, agreed to let the sorcerer stay in his palace.
+The sorcerer began to work for the emperor, and soon he was able to gain his trust. The emperor began to rely on the sorcerer for all of his needs, and the sorcerer began to manipulate the emperor’s mind
+Text generated in 2.731 seconds.
+Put llama3-3b to sleep
+Executing sleep server with level 1...
+Executing sleep level 1
+Server is sleeping after 0.413 seconds.
+
+
+**************************************************
+
+
+Wake up qwen2.5-3b
+Executing wakeup server with level 1...
+Executing wakeup for level 1
+Server is wakeup after 0.827 seconds.
+Generate for qwen2.5-3b
+Generating text for prompt: Once upon a time in a land far...
+Generating text: prompt='Once upon a time in a land far, far away,', max_tokens=256
+ there lived a magical queen. At the wooden wall of her throne room, a small furry dog named Giggles playfully hung out. Queen Ruby missed her cat Cat66 from an overdose of aspirin in her room, so every day, Cat66's former roommate Giggles helped arrange the queen's closet.
+In essence, you're doing 'hosting', downloading the files from Github, hosting locally, running the program, and can submit the code on a platform like LeetCode or CodeForces.
+So, where are you in your journey?
+YOUR QUEST: Let's build a Calculator in pure HTML, CSS and JavaScript that can perform some sort of math operations. Configure it as described below.
+Create a Calculator page with an area where one or more regular buttons can be added.
+Create the Buttons and their options you would want to make the Calculator responsive. Also create the buttons for Clearing the value inside the Calculator page and bringing about the mathematical calculation from the previous step.
+At the end of the day, you will get as many points as the number of buttons pressed in a given sequence that it takes to calculate the correct solution. Catch Mistakes efficiently.
+You can submit the code on a platform like LeetCode or CodeForces.
+Contextual Information
+Text generated in 2.809 seconds.
+Put qwen2.5-3b to sleep
+Executing sleep server with level 1...
+Executing sleep level 1
+Server is sleeping after 0.421 seconds.
+
+
+**************************************************
+
+
+Killing server with PID 1783753...
+Server killed in 0.001 seconds.
+Killing server with PID 1784283...
+Server killed in 0.002 seconds.

@@ -1,0 +1,1048 @@
+DEBUG 11-24 10:07:42.438 [__init__.py:28] No plugins for group vllm.platform_plugins found.
+DEBUG 11-24 10:07:42.438 [__init__.py:34] Checking if TPU platform is available.
+DEBUG 11-24 10:07:42.438 [__init__.py:52] TPU platform is not available because: No module named 'libtpu'
+DEBUG 11-24 10:07:42.438 [__init__.py:58] Checking if CUDA platform is available.
+DEBUG 11-24 10:07:42.449 [__init__.py:78] Confirmed CUDA platform is available.
+DEBUG 11-24 10:07:42.463 [__init__.py:106] Checking if ROCm platform is available.
+DEBUG 11-24 10:07:42.463 [__init__.py:120] ROCm platform is not available because: No module named 'amdsmi'
+DEBUG 11-24 10:07:42.463 [__init__.py:127] Checking if XPU platform is available.
+DEBUG 11-24 10:07:42.463 [__init__.py:146] XPU platform is not available because: No module named 'intel_extension_for_pytorch'
+DEBUG 11-24 10:07:42.463 [__init__.py:153] Checking if CPU platform is available.
+DEBUG 11-24 10:07:42.464 [__init__.py:58] Checking if CUDA platform is available.
+DEBUG 11-24 10:07:42.466 [__init__.py:78] Confirmed CUDA platform is available.
+INFO 11-24 10:07:42.480 [__init__.py:216] Automatically detected platform cuda.
+WARNING 11-24 10:07:43.803 [api_server.py:966] SECURITY WARNING: Development endpoints are enabled! This should NOT be used in production!
+DEBUG 11-24 10:07:43.806 [utils.py:163] Setting VLLM_WORKER_MULTIPROC_METHOD to 'spawn'
+DEBUG 11-24 10:07:43.810 [__init__.py:36] Available plugins for group vllm.general_plugins:
+DEBUG 11-24 10:07:43.810 [__init__.py:38] - lora_filesystem_resolver -> vllm.plugins.lora_resolvers.filesystem_resolver:register_filesystem_resolver
+DEBUG 11-24 10:07:43.810 [__init__.py:41] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:07:43.896 [api_server.py:1839] vLLM API server version 0.11.0
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:07:43.898 [utils.py:233] non-default args: {'port': 8500, 'model': '../models/llama3-3b', 'enable_sleep_mode': True}
+[1;36m(APIServer pid=1783754)[0;0m DEBUG 11-24 10:07:43.902 [registry.py:498] Loaded model info for class vllm.model_executor.models.llama.LlamaForCausalLM from cache
+[1;36m(APIServer pid=1783754)[0;0m DEBUG 11-24 10:07:43.902 [log_time.py:27] Registry inspect model class: Elapsed time 0.0002791 secs
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:07:43.902 [model.py:547] Resolved architecture: LlamaForCausalLM
+[1;36m(APIServer pid=1783754)[0;0m `torch_dtype` is deprecated! Use `dtype` instead!
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:07:43.920 [model.py:1510] Using max model len 131072
+[1;36m(APIServer pid=1783754)[0;0m DEBUG 11-24 10:07:43.954 [arg_utils.py:1672] Setting max_num_batched_tokens to 2048 for OPENAI_API_SERVER usage context.
+[1;36m(APIServer pid=1783754)[0;0m DEBUG 11-24 10:07:43.954 [arg_utils.py:1681] Setting max_num_seqs to 256 for OPENAI_API_SERVER usage context.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:07:44.034 [scheduler.py:205] Chunked prefill is enabled with max_num_batched_tokens=2048.
+DEBUG 11-24 10:07:46.345 [__init__.py:28] No plugins for group vllm.platform_plugins found.
+DEBUG 11-24 10:07:46.345 [__init__.py:34] Checking if TPU platform is available.
+DEBUG 11-24 10:07:46.345 [__init__.py:52] TPU platform is not available because: No module named 'libtpu'
+DEBUG 11-24 10:07:46.345 [__init__.py:58] Checking if CUDA platform is available.
+DEBUG 11-24 10:07:46.355 [__init__.py:78] Confirmed CUDA platform is available.
+DEBUG 11-24 10:07:46.369 [__init__.py:106] Checking if ROCm platform is available.
+DEBUG 11-24 10:07:46.369 [__init__.py:120] ROCm platform is not available because: No module named 'amdsmi'
+DEBUG 11-24 10:07:46.370 [__init__.py:127] Checking if XPU platform is available.
+DEBUG 11-24 10:07:46.370 [__init__.py:146] XPU platform is not available because: No module named 'intel_extension_for_pytorch'
+DEBUG 11-24 10:07:46.370 [__init__.py:153] Checking if CPU platform is available.
+DEBUG 11-24 10:07:46.370 [__init__.py:58] Checking if CUDA platform is available.
+DEBUG 11-24 10:07:46.373 [__init__.py:78] Confirmed CUDA platform is available.
+INFO 11-24 10:07:46.387 [__init__.py:216] Automatically detected platform cuda.
+WARNING 11-24 10:07:47.727 [api_server.py:966] SECURITY WARNING: Development endpoints are enabled! This should NOT be used in production!
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:07:47.833 [core.py:644] Waiting for init message from front-end.
+[1;36m(APIServer pid=1783754)[0;0m DEBUG 11-24 10:07:47.834 [utils.py:859] HELLO from local core engine process 0.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:47.834 [core.py:652] Received init message: EngineHandshakeMetadata(addresses=EngineZmqAddresses(inputs=['ipc:///tmp/a04488be-f3fd-4a60-a289-7ae87a95fcde'], outputs=['ipc:///tmp/a293c23e-187b-4a1e-80b8-1aeac43f43d0'], coordinator_input=None, coordinator_output=None, frontend_stats_publish_address=None), parallel_config={'data_parallel_master_ip': '127.0.0.1', 'data_parallel_master_port': 0, '_data_parallel_master_port_list': [], 'data_parallel_size': 1})
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:47.834 [core.py:487] Has DP Coordinator: False, stats publish address: None
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:47.837 [__init__.py:36] Available plugins for group vllm.general_plugins:
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:47.837 [__init__.py:38] - lora_filesystem_resolver -> vllm.plugins.lora_resolvers.filesystem_resolver:register_filesystem_resolver
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:47.837 [__init__.py:41] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:07:47.838 [core.py:77] Initializing a V1 LLM engine (v0.11.0) with config: model='../models/llama3-3b', speculative_config=None, tokenizer='../models/llama3-3b', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=131072, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=../models/llama3-3b, enable_prefix_caching=True, chunked_prefill_enabled=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.mamba_mixer2","vllm.mamba_mixer","vllm.short_conv","vllm.linear_attention","vllm.plamo2_mamba_mixer","vllm.gdn_attention","vllm.sparse_attn_indexer"],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":[2,1],"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"use_inductor_graph_partition":false,"pass_config":{},"max_capture_size":512,"local_cache_dir":null}
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:48.941 [decorators.py:155] Inferred dynamic dimensions for forward method of <class 'vllm.model_executor.models.deepseek_v2.DeepseekV2Model'>: ['input_ids', 'positions', 'intermediate_tensors', 'inputs_embeds']
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.049 [decorators.py:155] Inferred dynamic dimensions for forward method of <class 'vllm.model_executor.models.llama.LlamaModel'>: ['input_ids', 'positions', 'intermediate_tensors', 'inputs_embeds']
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.049 [decorators.py:155] Inferred dynamic dimensions for forward method of <class 'vllm.model_executor.models.llama_eagle3.LlamaModel'>: ['input_ids', 'positions', 'hidden_states']
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.150 [__init__.py:3188] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7f95ff937450>
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.261 [parallel_state.py:1029] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://131.234.187.201:35473 backend=nccl
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.291 [parallel_state.py:1083] Detected 1 nodes in the distributed environment
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:07:49.295 [parallel_state.py:1208] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m WARNING 11-24 10:07:49.491 [topk_topp_sampler.py:66] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.496 [__init__.py:57] No logitsprocs plugins installed (group vllm.logits_processors).
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:07:49.526 [gpu_model_runner.py:2602] Starting to load model ../models/llama3-3b...
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:07:49.721 [gpu_model_runner.py:2634] Loading model from scratch...
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.721 [cumem.py:171] Allocated 788529152 bytes for weights with address 12918456320 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.722 [cumem.py:171] Allocated 31457280 bytes for weights with address 140280313413632 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.723 [cumem.py:171] Allocated 18874368 bytes for weights with address 140280344870912 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.723 [cumem.py:171] Allocated 2097152 bytes for weights with address 13706985472 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.776 [cumem.py:171] Allocated 33554432 bytes for weights with address 140280363745280 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.776 [cumem.py:171] Allocated 33554432 bytes for weights with address 140280397299712 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.778 [cumem.py:171] Allocated 33554432 bytes for weights with address 140280430854144 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.779 [cumem.py:171] Allocated 67108864 bytes for weights with address 140280464408576 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:07:49.790 [cuda.py:366] Using Flash Attention backend on V1 engine.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.791 [cumem.py:171] Allocated 100663296 bytes for weights with address 13723762688 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.792 [cumem.py:171] Allocated 100663296 bytes for weights with address 13824425984 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.792 [cumem.py:171] Allocated 50331648 bytes for weights with address 140280531517440 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.793 [cumem.py:171] Allocated 31457280 bytes for weights with address 140280581849088 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.793 [cumem.py:171] Allocated 18874368 bytes for weights with address 13925089280 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.794 [cumem.py:171] Allocated 100663296 bytes for weights with address 13958643712 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.794 [cumem.py:171] Allocated 50331648 bytes for weights with address 14059307008 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.795 [cumem.py:171] Allocated 31457280 bytes for weights with address 14126415872 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.795 [cumem.py:171] Allocated 18874368 bytes for weights with address 14159970304 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.795 [cumem.py:171] Allocated 100663296 bytes for weights with address 14193524736 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.796 [cumem.py:171] Allocated 50331648 bytes for weights with address 14294188032 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.796 [cumem.py:171] Allocated 31457280 bytes for weights with address 14361296896 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.797 [cumem.py:171] Allocated 18874368 bytes for weights with address 14394851328 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.797 [cumem.py:171] Allocated 100663296 bytes for weights with address 14428405760 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.797 [cumem.py:171] Allocated 50331648 bytes for weights with address 14529069056 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.798 [cumem.py:171] Allocated 31457280 bytes for weights with address 14596177920 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.798 [cumem.py:171] Allocated 18874368 bytes for weights with address 14629732352 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.799 [cumem.py:171] Allocated 100663296 bytes for weights with address 14663286784 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.799 [cumem.py:171] Allocated 50331648 bytes for weights with address 14763950080 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.799 [cumem.py:171] Allocated 31457280 bytes for weights with address 14831058944 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.800 [cumem.py:171] Allocated 18874368 bytes for weights with address 14864613376 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.800 [cumem.py:171] Allocated 100663296 bytes for weights with address 14898167808 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.801 [cumem.py:171] Allocated 50331648 bytes for weights with address 14998831104 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.801 [cumem.py:171] Allocated 31457280 bytes for weights with address 15065939968 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.801 [cumem.py:171] Allocated 18874368 bytes for weights with address 15099494400 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.802 [cumem.py:171] Allocated 100663296 bytes for weights with address 15133048832 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.802 [cumem.py:171] Allocated 50331648 bytes for weights with address 15233712128 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.803 [cumem.py:171] Allocated 31457280 bytes for weights with address 15300820992 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.803 [cumem.py:171] Allocated 18874368 bytes for weights with address 15334375424 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.803 [cumem.py:171] Allocated 100663296 bytes for weights with address 15367929856 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.804 [cumem.py:171] Allocated 50331648 bytes for weights with address 15468593152 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.804 [cumem.py:171] Allocated 31457280 bytes for weights with address 15535702016 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.804 [cumem.py:171] Allocated 18874368 bytes for weights with address 15569256448 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.805 [cumem.py:171] Allocated 100663296 bytes for weights with address 15602810880 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.805 [cumem.py:171] Allocated 50331648 bytes for weights with address 15703474176 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.806 [cumem.py:171] Allocated 31457280 bytes for weights with address 15770583040 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.806 [cumem.py:171] Allocated 18874368 bytes for weights with address 15804137472 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.807 [cumem.py:171] Allocated 100663296 bytes for weights with address 15837691904 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.807 [cumem.py:171] Allocated 50331648 bytes for weights with address 15938355200 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.807 [cumem.py:171] Allocated 31457280 bytes for weights with address 16005464064 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.808 [cumem.py:171] Allocated 18874368 bytes for weights with address 16039018496 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.808 [cumem.py:171] Allocated 100663296 bytes for weights with address 16072572928 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.808 [cumem.py:171] Allocated 50331648 bytes for weights with address 16173236224 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.809 [cumem.py:171] Allocated 31457280 bytes for weights with address 16240345088 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.809 [cumem.py:171] Allocated 18874368 bytes for weights with address 16273899520 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.810 [cumem.py:171] Allocated 100663296 bytes for weights with address 16307453952 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.810 [cumem.py:171] Allocated 50331648 bytes for weights with address 16408117248 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.811 [cumem.py:171] Allocated 31457280 bytes for weights with address 16475226112 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.811 [cumem.py:171] Allocated 18874368 bytes for weights with address 16508780544 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.811 [cumem.py:171] Allocated 100663296 bytes for weights with address 16542334976 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.812 [cumem.py:171] Allocated 50331648 bytes for weights with address 16642998272 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.812 [cumem.py:171] Allocated 31457280 bytes for weights with address 16710107136 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.812 [cumem.py:171] Allocated 18874368 bytes for weights with address 16743661568 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.813 [cumem.py:171] Allocated 100663296 bytes for weights with address 16777216000 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.813 [cumem.py:171] Allocated 50331648 bytes for weights with address 16877879296 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.814 [cumem.py:171] Allocated 31457280 bytes for weights with address 16944988160 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.814 [cumem.py:171] Allocated 18874368 bytes for weights with address 16978542592 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.815 [cumem.py:171] Allocated 100663296 bytes for weights with address 17012097024 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.815 [cumem.py:171] Allocated 50331648 bytes for weights with address 17112760320 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.815 [cumem.py:171] Allocated 31457280 bytes for weights with address 17179869184 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.816 [cumem.py:171] Allocated 18874368 bytes for weights with address 17213423616 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.816 [cumem.py:171] Allocated 100663296 bytes for weights with address 17246978048 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.816 [cumem.py:171] Allocated 50331648 bytes for weights with address 17347641344 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.817 [cumem.py:171] Allocated 31457280 bytes for weights with address 17414750208 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.817 [cumem.py:171] Allocated 18874368 bytes for weights with address 17448304640 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.818 [cumem.py:171] Allocated 100663296 bytes for weights with address 17481859072 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.818 [cumem.py:171] Allocated 50331648 bytes for weights with address 17582522368 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.818 [cumem.py:171] Allocated 31457280 bytes for weights with address 17649631232 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.819 [cumem.py:171] Allocated 18874368 bytes for weights with address 17683185664 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.819 [cumem.py:171] Allocated 100663296 bytes for weights with address 17716740096 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.820 [cumem.py:171] Allocated 50331648 bytes for weights with address 17817403392 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.820 [cumem.py:171] Allocated 31457280 bytes for weights with address 17884512256 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.820 [cumem.py:171] Allocated 18874368 bytes for weights with address 17918066688 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.821 [cumem.py:171] Allocated 100663296 bytes for weights with address 17951621120 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.821 [cumem.py:171] Allocated 50331648 bytes for weights with address 18052284416 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.822 [cumem.py:171] Allocated 31457280 bytes for weights with address 18119393280 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.822 [cumem.py:171] Allocated 18874368 bytes for weights with address 18152947712 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.822 [cumem.py:171] Allocated 100663296 bytes for weights with address 18186502144 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.823 [cumem.py:171] Allocated 50331648 bytes for weights with address 18287165440 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.823 [cumem.py:171] Allocated 31457280 bytes for weights with address 18354274304 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.824 [cumem.py:171] Allocated 18874368 bytes for weights with address 18387828736 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.824 [cumem.py:171] Allocated 100663296 bytes for weights with address 18421383168 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.824 [cumem.py:171] Allocated 50331648 bytes for weights with address 18522046464 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.825 [cumem.py:171] Allocated 31457280 bytes for weights with address 18589155328 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.825 [cumem.py:171] Allocated 18874368 bytes for weights with address 18622709760 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.826 [cumem.py:171] Allocated 100663296 bytes for weights with address 18656264192 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.826 [cumem.py:171] Allocated 50331648 bytes for weights with address 18756927488 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.826 [cumem.py:171] Allocated 31457280 bytes for weights with address 18824036352 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.827 [cumem.py:171] Allocated 18874368 bytes for weights with address 18857590784 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.827 [cumem.py:171] Allocated 100663296 bytes for weights with address 18891145216 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.827 [cumem.py:171] Allocated 50331648 bytes for weights with address 18991808512 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.828 [cumem.py:171] Allocated 31457280 bytes for weights with address 19058917376 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.828 [cumem.py:171] Allocated 18874368 bytes for weights with address 19092471808 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.829 [cumem.py:171] Allocated 100663296 bytes for weights with address 19126026240 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.829 [cumem.py:171] Allocated 50331648 bytes for weights with address 19226689536 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.830 [cumem.py:171] Allocated 31457280 bytes for weights with address 19293798400 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.830 [cumem.py:171] Allocated 18874368 bytes for weights with address 19327352832 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.830 [cumem.py:171] Allocated 100663296 bytes for weights with address 19360907264 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.831 [cumem.py:171] Allocated 50331648 bytes for weights with address 19461570560 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.831 [cumem.py:171] Allocated 31457280 bytes for weights with address 19528679424 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.831 [cumem.py:171] Allocated 18874368 bytes for weights with address 19562233856 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.832 [cumem.py:171] Allocated 100663296 bytes for weights with address 19595788288 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.832 [cumem.py:171] Allocated 50331648 bytes for weights with address 19696451584 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.833 [cumem.py:171] Allocated 31457280 bytes for weights with address 19763560448 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.833 [cumem.py:171] Allocated 18874368 bytes for weights with address 19797114880 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.834 [cumem.py:171] Allocated 100663296 bytes for weights with address 19830669312 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.834 [cumem.py:171] Allocated 50331648 bytes for weights with address 19931332608 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.845 [backends.py:42] Using InductorAdaptor
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.860 [cumem.py:171] Allocated 788529152 bytes for weights with address 19998441472 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.860 [compilation.py:649] enabled custom ops: Counter()
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.860 [compilation.py:650] disabled custom ops: Counter({'rms_norm': 57, 'column_parallel_linear': 56, 'row_parallel_linear': 56, 'silu_and_mul': 28, 'vocab_parallel_embedding': 1, 'rotary_embedding': 1, 'parallel_lm_head': 1, 'logits_processor': 1})
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:49.861 [base_loader.py:48] Loading weights on cuda ...
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:00<00:00,  1.96it/s]
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:00<00:00,  2.60it/s]
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:00<00:00,  2.48it/s]
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m 
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:07:50.711 [default_loader.py:267] Loading weights took 0.85 seconds
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:07:51.097 [gpu_model_runner.py:2653] Model loading took 6.0160 GiB and 0.993045 seconds
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:51.098 [cumem.py:183] Freed 788529152 bytes for weights with address 19998441472 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:51.288 [decorators.py:256] Start compiling function <code object forward at 0xd451720, file "/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 381>
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:53.992 [backends.py:501] Traced files (to be considered for compilation cache):
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:53.992 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/torch/_dynamo/polyfills/__init__.py
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:53.992 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/torch/nn/modules/container.py
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:53.992 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/attention/layer.py
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:53.992 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/distributed/communication_op.py
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:53.992 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/distributed/parallel_state.py
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:53.992 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/custom_op.py
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:53.992 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/layers/activation.py
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:53.992 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/layers/layernorm.py
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:53.992 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:53.992 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/layers/rotary_embedding/base.py
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:53.992 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/layers/rotary_embedding/common.py
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:53.992 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/layers/utils.py
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:53.992 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/layers/vocab_parallel_embedding.py
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:53.992 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/models/llama.py
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:53.992 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/platforms/interface.py
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:07:54.302 [backends.py:548] Using cache directory: /local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/backbone for vLLM's torch.compile
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:07:54.302 [backends.py:559] Dynamo bytecode transform time: 3.01 s
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:54.486 [backends.py:127] Directly load the 0-th graph for dynamic shape from inductor via handle ('frkg34ejix6bmq5r36t3h4ynjemi7tyy7yjeskomutxm7cjpivi7', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/3c/c3cypexe64fms4jawzmylzmympjb6wtcz3oyvcvrv7jhqpvl6zti.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:54.526 [backends.py:127] Directly load the 1-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:54.563 [backends.py:127] Directly load the 2-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:54.600 [backends.py:127] Directly load the 3-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:54.638 [backends.py:127] Directly load the 4-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:54.675 [backends.py:127] Directly load the 5-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:54.713 [backends.py:127] Directly load the 6-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:54.752 [backends.py:127] Directly load the 7-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:54.790 [backends.py:127] Directly load the 8-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:54.827 [backends.py:127] Directly load the 9-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:54.865 [backends.py:127] Directly load the 10-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:54.903 [backends.py:127] Directly load the 11-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:54.941 [backends.py:127] Directly load the 12-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:54.979 [backends.py:127] Directly load the 13-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:55.018 [backends.py:127] Directly load the 14-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:55.056 [backends.py:127] Directly load the 15-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:55.094 [backends.py:127] Directly load the 16-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:55.132 [backends.py:127] Directly load the 17-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:55.170 [backends.py:127] Directly load the 18-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:55.208 [backends.py:127] Directly load the 19-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:55.246 [backends.py:127] Directly load the 20-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:55.283 [backends.py:127] Directly load the 21-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:55.322 [backends.py:127] Directly load the 22-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:55.360 [backends.py:127] Directly load the 23-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:55.398 [backends.py:127] Directly load the 24-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:55.436 [backends.py:127] Directly load the 25-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:55.474 [backends.py:127] Directly load the 26-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:55.511 [backends.py:127] Directly load the 27-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:55.523 [backends.py:127] Directly load the 28-th graph for dynamic shape from inductor via handle ('f5w5fdrq4lx4ngfnkdeztoj5jcfx4s5xr67ixmzd6qwwf6seikmb', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/sw/cswmu2kg747hrtykl2x7saktbitneybzl5qnfelvo6zfmnnorcy7.py')
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:07:55.523 [backends.py:164] Directly load the compiled graph(s) for dynamic shape from the cache, took 1.060 s
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:07:56.185 [monitor.py:34] torch.compile takes 3.01 s in total
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:56.801 [gpu_worker.py:284] Initial free memory: 43.90 GiB; Requested memory: 0.90 (util), 39.95 GiB
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:56.801 [gpu_worker.py:291] Free memory after profiling: 37.78 GiB (total), 33.83 GiB (within requested)
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:56.801 [gpu_worker.py:297] Memory profiling takes 5.51 seconds. Total non KV cache memory: 6.50GiB; torch peak memory increase: 1.19GiB; non-torch forward increase memory: -0.70GiB; weights memory: 6.02GiB.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:07:56.801 [gpu_worker.py:298] Available KV cache memory: 33.45 GiB
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:07:57.043 [kv_cache_utils.py:1087] GPU KV cache size: 313,152 tokens
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:07:57.043 [kv_cache_utils.py:1091] Maximum concurrency for 131,072 tokens per request: 2.39x
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.044 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 20803747840 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.045 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 22112370688 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.045 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 23420993536 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.045 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 24729616384 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.046 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 26038239232 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.046 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 27346862080 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.046 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 28655484928 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.047 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 29964107776 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.047 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 31272730624 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.047 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 32581353472 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.047 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 33889976320 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.048 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 35198599168 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.048 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 36507222016 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.048 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 37815844864 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.048 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 39124467712 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.049 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 40433090560 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.049 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 41741713408 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.049 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 43050336256 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.049 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 44358959104 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.050 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 45667581952 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.050 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 46976204800 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.050 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 48284827648 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.051 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 49593450496 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.051 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 50902073344 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.051 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 52210696192 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.051 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 53519319040 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.052 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 54827941888 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.052 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 56136564736 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/67 [00:00<?, ?it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.315 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=512, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.342 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=504, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.369 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=496, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.395 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=488, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   6%|▌         | 4/67 [00:00<00:01, 37.42it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.421 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=480, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.447 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=472, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.473 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=464, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.500 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=456, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  12%|█▏        | 8/67 [00:00<00:01, 37.85it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.526 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=448, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.552 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=440, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.578 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=432, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.605 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=424, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  18%|█▊        | 12/67 [00:00<00:01, 37.90it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.631 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=416, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.658 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=408, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.684 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=400, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.711 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=392, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  24%|██▍       | 16/67 [00:00<00:01, 37.79it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.736 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=384, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.761 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=376, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.786 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=368, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.811 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=360, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  30%|██▉       | 20/67 [00:00<00:01, 38.44it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.837 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=352, uniform_decode=False))
+[1;36m(APIServer pid=1783754)[0;0m DEBUG 11-24 10:07:57.841 [utils.py:776] Waiting for 1 local, 0 remote core engine proc(s) to start.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.862 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=344, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.888 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=336, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.913 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=328, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  36%|███▌      | 24/67 [00:00<00:01, 38.79it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.938 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=320, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.964 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=312, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:57.988 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=304, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.013 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=296, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  42%|████▏     | 28/67 [00:00<00:00, 39.16it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.037 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=288, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.060 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=280, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.083 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=272, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.106 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=264, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.136 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=256, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  49%|████▉     | 33/67 [00:00<00:00, 39.67it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.160 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=248, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.183 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=240, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.207 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=232, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.231 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=224, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.254 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=216, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  57%|█████▋    | 38/67 [00:00<00:00, 40.45it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.278 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=208, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.302 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=200, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.325 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=192, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.348 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=184, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.372 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=176, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  64%|██████▍   | 43/67 [00:01<00:00, 41.21it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.394 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=168, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.418 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=160, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.449 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=152, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.472 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=144, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.495 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=136, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  72%|███████▏  | 48/67 [00:01<00:00, 40.84it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.519 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=128, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.542 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=120, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.564 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=112, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.587 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=104, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.609 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=96, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  79%|███████▉  | 53/67 [00:01<00:00, 41.76it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.633 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=88, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.656 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=80, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.679 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=72, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.701 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=64, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.724 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=56, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  87%|████████▋ | 58/67 [00:01<00:00, 42.38it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.746 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=48, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.768 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=40, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.790 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=32, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.812 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=24, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.834 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=16, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  94%|█████████▍| 63/67 [00:01<00:00, 43.30it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.855 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=8, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.877 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=4, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.898 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=2, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.931 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=1, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 67/67 [00:01<00:00, 40.67it/s]
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m Capturing CUDA graphs (decode, FULL):   0%|          | 0/35 [00:00<?, ?it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.965 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=256, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:58.990 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=248, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.015 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=240, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.039 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=232, uniform_decode=True))
+Capturing CUDA graphs (decode, FULL):  11%|█▏        | 4/35 [00:00<00:00, 38.06it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.065 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=224, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.090 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=216, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.114 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=208, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.137 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=200, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.161 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=192, uniform_decode=True))
+Capturing CUDA graphs (decode, FULL):  26%|██▌       | 9/35 [00:00<00:00, 40.45it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.184 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=184, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.207 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=176, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.230 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=168, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.252 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=160, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.274 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=152, uniform_decode=True))
+Capturing CUDA graphs (decode, FULL):  40%|████      | 14/35 [00:00<00:00, 42.10it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.297 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=144, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.319 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=136, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.341 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=128, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.363 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=120, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.385 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=112, uniform_decode=True))
+Capturing CUDA graphs (decode, FULL):  54%|█████▍    | 19/35 [00:00<00:00, 43.35it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.406 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=104, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.428 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=96, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.451 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=88, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.473 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=80, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.495 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=72, uniform_decode=True))
+Capturing CUDA graphs (decode, FULL):  69%|██████▊   | 24/35 [00:00<00:00, 44.10it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.516 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=64, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.536 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=56, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.557 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=48, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.577 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=40, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.598 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=32, uniform_decode=True))
+Capturing CUDA graphs (decode, FULL):  83%|████████▎ | 29/35 [00:00<00:00, 45.60it/s][1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.618 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=24, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.638 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=16, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.657 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=8, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.677 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=4, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.696 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=2, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.715 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=1, uniform_decode=True))
+Capturing CUDA graphs (decode, FULL): 100%|██████████| 35/35 [00:00<00:00, 47.47it/s]Capturing CUDA graphs (decode, FULL): 100%|██████████| 35/35 [00:00<00:00, 44.96it/s]
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:07:59.982 [gpu_model_runner.py:3480] Graph capturing finished in 3 secs, took 0.55 GiB
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:07:59.982 [gpu_worker.py:393] Free memory on device (43.9/44.39 GiB) on startup. Desired GPU memory utilization is (0.9, 39.95 GiB). Actual usage is 6.02 GiB for weight, 1.19 GiB for peak activation, -0.7 GiB for non-torch memory, and 0.55 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=35165692518` (32.75 GiB) to fit into requested memory, or `--kv-cache-memory=39405681664` (36.7 GiB) to fully utilize gpu memory. Current kv cache memory in use is 33.45 GiB.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:07:59.996 [core.py:210] init engine (profile, create kv cache, warmup model) took 8.90 seconds
+[1;36m(APIServer pid=1783754)[0;0m DEBUG 11-24 10:08:00.297 [utils.py:859] READY from local core engine process 0.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.482 [loggers.py:147] Engine 000: vllm cache_config_info with initialization after num_gpu_blocks is: 19572
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:00.554 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:00.555 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:00.595 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.596 [api_server.py:1634] Supported_tasks: ['generate']
+[1;36m(APIServer pid=1783754)[0;0m WARNING 11-24 10:08:00.598 [model.py:1389] Default sampling parameters have been overridden by the model's Hugging Face generation config recommended from the model creator. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.598 [serving_responses.py:137] Using default chat sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.599 [serving_chat.py:139] Using default chat sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.600 [serving_completion.py:76] Using default completion sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.601 [api_server.py:1912] Starting vLLM API server 0 on http://0.0.0.0:8500
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.601 [launcher.py:34] Available routes are:
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.601 [launcher.py:42] Route: /openapi.json, Methods: HEAD, GET
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.601 [launcher.py:42] Route: /docs, Methods: HEAD, GET
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.601 [launcher.py:42] Route: /docs/oauth2-redirect, Methods: HEAD, GET
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.602 [launcher.py:42] Route: /redoc, Methods: HEAD, GET
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.602 [launcher.py:42] Route: /health, Methods: GET
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.602 [launcher.py:42] Route: /load, Methods: GET
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.602 [launcher.py:42] Route: /ping, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.602 [launcher.py:42] Route: /ping, Methods: GET
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.602 [launcher.py:42] Route: /tokenize, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.603 [launcher.py:42] Route: /detokenize, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.603 [launcher.py:42] Route: /v1/models, Methods: GET
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.603 [launcher.py:42] Route: /version, Methods: GET
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.603 [launcher.py:42] Route: /v1/responses, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.603 [launcher.py:42] Route: /v1/responses/{response_id}, Methods: GET
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.603 [launcher.py:42] Route: /v1/responses/{response_id}/cancel, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.604 [launcher.py:42] Route: /v1/chat/completions, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.604 [launcher.py:42] Route: /v1/completions, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.604 [launcher.py:42] Route: /v1/embeddings, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.604 [launcher.py:42] Route: /pooling, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.604 [launcher.py:42] Route: /classify, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.604 [launcher.py:42] Route: /score, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.604 [launcher.py:42] Route: /v1/score, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.605 [launcher.py:42] Route: /v1/audio/transcriptions, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.605 [launcher.py:42] Route: /v1/audio/translations, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.605 [launcher.py:42] Route: /rerank, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.605 [launcher.py:42] Route: /v1/rerank, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.605 [launcher.py:42] Route: /v2/rerank, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.605 [launcher.py:42] Route: /server_info, Methods: GET
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.606 [launcher.py:42] Route: /reset_prefix_cache, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.606 [launcher.py:42] Route: /sleep, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.606 [launcher.py:42] Route: /wake_up, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.606 [launcher.py:42] Route: /is_sleeping, Methods: GET
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.606 [launcher.py:42] Route: /collective_rpc, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.606 [launcher.py:42] Route: /scale_elastic_ep, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.607 [launcher.py:42] Route: /is_scaling_elastic_ep, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.607 [launcher.py:42] Route: /invocations, Methods: POST
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:00.607 [launcher.py:42] Route: /metrics, Methods: GET
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:01.499 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:01.500 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:01.570 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:01.571 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:01.582 [core.py:743] EngineCore loop active.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:04.227 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:04.313 [block_pool.py:378] Successfully reset prefix cache
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:04.314 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:08.042 [cumem.py:228] CuMemAllocator: sleep freed 39.52 GiB memory in total, of which 6.05 GiB is backed up in CPU and the rest 33.47 GiB is discarded directly.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:08.052 [gpu_worker.py:117] Sleep mode freed 40.67 GiB memory, 1.13 GiB memory is still in use.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:08.052 [executor_base.py:189] It took 3.737272 seconds to fall asleep.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:08.052 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:08.068 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:08.069 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:10.773 [loggers.py:127] Engine 000: Avg prompt throughput: 1.3 tokens/s, Avg generation throughput: 24.9 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:20.774 [loggers.py:127] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+[1;36m(APIServer pid=1783754)[0;0m DEBUG 11-24 10:08:30.774 [loggers.py:127] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:38.185 [api_server.py:1016] wake up the engine with tags: None
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:38.923 [executor_base.py:205] It took 0.737022 seconds to wake up tags {'weights', 'kv_cache'}.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:38.924 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:38.939 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:38.940 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:39.008 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:39.009 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:39.015 [core.py:743] EngineCore loop active.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:40.774 [loggers.py:127] Engine 000: Avg prompt throughput: 1.3 tokens/s, Avg generation throughput: 17.0 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.1%, Prefix cache hit rate: 0.0%
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:41.659 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:41.743 [block_pool.py:378] Successfully reset prefix cache
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:41.743 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:42.064 [cumem.py:228] CuMemAllocator: sleep freed 39.52 GiB memory in total, of which 6.05 GiB is backed up in CPU and the rest 33.47 GiB is discarded directly.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:42.066 [gpu_worker.py:117] Sleep mode freed 39.52 GiB memory, 2.41 GiB memory is still in use.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:42.066 [executor_base.py:189] It took 0.321474 seconds to fall asleep.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:42.066 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:42.082 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:42.083 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:46.239 [api_server.py:1016] wake up the engine with tags: None
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:46.977 [executor_base.py:205] It took 0.736689 seconds to wake up tags {'weights', 'kv_cache'}.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:46.977 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:46.993 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:46.994 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:47.065 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:47.066 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:47.072 [core.py:743] EngineCore loop active.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:49.715 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:49.799 [block_pool.py:378] Successfully reset prefix cache
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:49.800 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:50.120 [cumem.py:228] CuMemAllocator: sleep freed 39.52 GiB memory in total, of which 6.05 GiB is backed up in CPU and the rest 33.47 GiB is discarded directly.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:50.122 [gpu_worker.py:117] Sleep mode freed 39.52 GiB memory, 2.41 GiB memory is still in use.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:50.122 [executor_base.py:189] It took 0.321532 seconds to fall asleep.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:50.122 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:50.138 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:50.139 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:50.774 [loggers.py:127] Engine 000: Avg prompt throughput: 1.3 tokens/s, Avg generation throughput: 34.2 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:54.266 [api_server.py:1016] wake up the engine with tags: None
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:55.010 [executor_base.py:205] It took 0.743042 seconds to wake up tags {'weights', 'kv_cache'}.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:55.010 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:55.025 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:55.026 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:55.096 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:55.097 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:55.103 [core.py:743] EngineCore loop active.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:57.744 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:57.830 [block_pool.py:378] Successfully reset prefix cache
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:57.831 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:58.151 [cumem.py:228] CuMemAllocator: sleep freed 39.52 GiB memory in total, of which 6.05 GiB is backed up in CPU and the rest 33.47 GiB is discarded directly.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:58.153 [gpu_worker.py:117] Sleep mode freed 39.52 GiB memory, 2.41 GiB memory is still in use.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m INFO 11-24 10:08:58.153 [executor_base.py:189] It took 0.321286 seconds to fall asleep.
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:58.153 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:08:58.169 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1783909)[0;0m DEBUG 11-24 10:08:58.170 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1783754)[0;0m INFO 11-24 10:09:00.776 [loggers.py:127] Engine 000: Avg prompt throughput: 1.3 tokens/s, Avg generation throughput: 25.6 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+DEBUG 11-24 10:38:56.964 [__init__.py:28] No plugins for group vllm.platform_plugins found.
+DEBUG 11-24 10:38:56.965 [__init__.py:34] Checking if TPU platform is available.
+DEBUG 11-24 10:38:56.965 [__init__.py:52] TPU platform is not available because: No module named 'libtpu'
+DEBUG 11-24 10:38:56.965 [__init__.py:58] Checking if CUDA platform is available.
+DEBUG 11-24 10:38:56.976 [__init__.py:78] Confirmed CUDA platform is available.
+DEBUG 11-24 10:38:56.990 [__init__.py:106] Checking if ROCm platform is available.
+DEBUG 11-24 10:38:56.990 [__init__.py:120] ROCm platform is not available because: No module named 'amdsmi'
+DEBUG 11-24 10:38:56.990 [__init__.py:127] Checking if XPU platform is available.
+DEBUG 11-24 10:38:56.990 [__init__.py:146] XPU platform is not available because: No module named 'intel_extension_for_pytorch'
+DEBUG 11-24 10:38:56.990 [__init__.py:153] Checking if CPU platform is available.
+DEBUG 11-24 10:38:56.991 [__init__.py:58] Checking if CUDA platform is available.
+DEBUG 11-24 10:38:56.993 [__init__.py:78] Confirmed CUDA platform is available.
+INFO 11-24 10:38:57.007 [__init__.py:216] Automatically detected platform cuda.
+WARNING 11-24 10:38:58.331 [api_server.py:966] SECURITY WARNING: Development endpoints are enabled! This should NOT be used in production!
+DEBUG 11-24 10:38:58.334 [utils.py:163] Setting VLLM_WORKER_MULTIPROC_METHOD to 'spawn'
+DEBUG 11-24 10:38:58.338 [__init__.py:36] Available plugins for group vllm.general_plugins:
+DEBUG 11-24 10:38:58.338 [__init__.py:38] - lora_filesystem_resolver -> vllm.plugins.lora_resolvers.filesystem_resolver:register_filesystem_resolver
+DEBUG 11-24 10:38:58.338 [__init__.py:41] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:38:58.423 [api_server.py:1839] vLLM API server version 0.11.0
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:38:58.426 [utils.py:233] non-default args: {'port': 8500, 'model': '../models/llama3-3b', 'enable_sleep_mode': True}
+[1;36m(APIServer pid=1791316)[0;0m DEBUG 11-24 10:38:58.429 [registry.py:498] Loaded model info for class vllm.model_executor.models.llama.LlamaForCausalLM from cache
+[1;36m(APIServer pid=1791316)[0;0m DEBUG 11-24 10:38:58.429 [log_time.py:27] Registry inspect model class: Elapsed time 0.0002780 secs
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:38:58.429 [model.py:547] Resolved architecture: LlamaForCausalLM
+[1;36m(APIServer pid=1791316)[0;0m `torch_dtype` is deprecated! Use `dtype` instead!
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:38:58.447 [model.py:1510] Using max model len 131072
+[1;36m(APIServer pid=1791316)[0;0m DEBUG 11-24 10:38:58.481 [arg_utils.py:1672] Setting max_num_batched_tokens to 2048 for OPENAI_API_SERVER usage context.
+[1;36m(APIServer pid=1791316)[0;0m DEBUG 11-24 10:38:58.481 [arg_utils.py:1681] Setting max_num_seqs to 256 for OPENAI_API_SERVER usage context.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:38:58.560 [scheduler.py:205] Chunked prefill is enabled with max_num_batched_tokens=2048.
+DEBUG 11-24 10:39:00.879 [__init__.py:28] No plugins for group vllm.platform_plugins found.
+DEBUG 11-24 10:39:00.879 [__init__.py:34] Checking if TPU platform is available.
+DEBUG 11-24 10:39:00.879 [__init__.py:52] TPU platform is not available because: No module named 'libtpu'
+DEBUG 11-24 10:39:00.879 [__init__.py:58] Checking if CUDA platform is available.
+DEBUG 11-24 10:39:00.889 [__init__.py:78] Confirmed CUDA platform is available.
+DEBUG 11-24 10:39:00.904 [__init__.py:106] Checking if ROCm platform is available.
+DEBUG 11-24 10:39:00.904 [__init__.py:120] ROCm platform is not available because: No module named 'amdsmi'
+DEBUG 11-24 10:39:00.904 [__init__.py:127] Checking if XPU platform is available.
+DEBUG 11-24 10:39:00.904 [__init__.py:146] XPU platform is not available because: No module named 'intel_extension_for_pytorch'
+DEBUG 11-24 10:39:00.904 [__init__.py:153] Checking if CPU platform is available.
+DEBUG 11-24 10:39:00.905 [__init__.py:58] Checking if CUDA platform is available.
+DEBUG 11-24 10:39:00.907 [__init__.py:78] Confirmed CUDA platform is available.
+INFO 11-24 10:39:00.921 [__init__.py:216] Automatically detected platform cuda.
+WARNING 11-24 10:39:02.264 [api_server.py:966] SECURITY WARNING: Development endpoints are enabled! This should NOT be used in production!
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:02.369 [core.py:644] Waiting for init message from front-end.
+[1;36m(APIServer pid=1791316)[0;0m DEBUG 11-24 10:39:02.370 [utils.py:859] HELLO from local core engine process 0.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:02.370 [core.py:652] Received init message: EngineHandshakeMetadata(addresses=EngineZmqAddresses(inputs=['ipc:///tmp/d212466b-c259-4675-95da-f0a07e161111'], outputs=['ipc:///tmp/2019d3bd-b4ef-4526-89b4-fb40581c3511'], coordinator_input=None, coordinator_output=None, frontend_stats_publish_address=None), parallel_config={'data_parallel_master_ip': '127.0.0.1', 'data_parallel_master_port': 0, '_data_parallel_master_port_list': [], 'data_parallel_size': 1})
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:02.370 [core.py:487] Has DP Coordinator: False, stats publish address: None
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:02.373 [__init__.py:36] Available plugins for group vllm.general_plugins:
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:02.373 [__init__.py:38] - lora_filesystem_resolver -> vllm.plugins.lora_resolvers.filesystem_resolver:register_filesystem_resolver
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:02.374 [__init__.py:41] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:02.374 [core.py:77] Initializing a V1 LLM engine (v0.11.0) with config: model='../models/llama3-3b', speculative_config=None, tokenizer='../models/llama3-3b', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=131072, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=../models/llama3-3b, enable_prefix_caching=True, chunked_prefill_enabled=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.mamba_mixer2","vllm.mamba_mixer","vllm.short_conv","vllm.linear_attention","vllm.plamo2_mamba_mixer","vllm.gdn_attention","vllm.sparse_attn_indexer"],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":[2,1],"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"use_inductor_graph_partition":false,"pass_config":{},"max_capture_size":512,"local_cache_dir":null}
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:03.487 [decorators.py:155] Inferred dynamic dimensions for forward method of <class 'vllm.model_executor.models.deepseek_v2.DeepseekV2Model'>: ['input_ids', 'positions', 'intermediate_tensors', 'inputs_embeds']
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:03.592 [decorators.py:155] Inferred dynamic dimensions for forward method of <class 'vllm.model_executor.models.llama.LlamaModel'>: ['input_ids', 'positions', 'intermediate_tensors', 'inputs_embeds']
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:03.593 [decorators.py:155] Inferred dynamic dimensions for forward method of <class 'vllm.model_executor.models.llama_eagle3.LlamaModel'>: ['input_ids', 'positions', 'hidden_states']
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:03.694 [__init__.py:3188] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7f46aafc4190>
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:03.810 [parallel_state.py:1029] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://131.234.187.201:43083 backend=nccl
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:03.831 [parallel_state.py:1083] Detected 1 nodes in the distributed environment
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:03.835 [parallel_state.py:1208] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m WARNING 11-24 10:39:04.030 [topk_topp_sampler.py:66] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.035 [__init__.py:57] No logitsprocs plugins installed (group vllm.logits_processors).
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:04.062 [gpu_model_runner.py:2602] Starting to load model ../models/llama3-3b...
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:04.262 [gpu_model_runner.py:2634] Loading model from scratch...
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.263 [cumem.py:171] Allocated 788529152 bytes for weights with address 12918456320 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.263 [cumem.py:171] Allocated 31457280 bytes for weights with address 139939601711104 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.264 [cumem.py:171] Allocated 18874368 bytes for weights with address 139939633168384 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.264 [cumem.py:171] Allocated 2097152 bytes for weights with address 13706985472 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.317 [cumem.py:171] Allocated 33554432 bytes for weights with address 139939652042752 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.317 [cumem.py:171] Allocated 33554432 bytes for weights with address 139939685597184 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.319 [cumem.py:171] Allocated 33554432 bytes for weights with address 139939719151616 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.321 [cumem.py:171] Allocated 67108864 bytes for weights with address 139939752706048 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:04.332 [cuda.py:366] Using Flash Attention backend on V1 engine.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.332 [cumem.py:171] Allocated 100663296 bytes for weights with address 13723762688 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.334 [cumem.py:171] Allocated 100663296 bytes for weights with address 13824425984 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.334 [cumem.py:171] Allocated 50331648 bytes for weights with address 139939819814912 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.334 [cumem.py:171] Allocated 31457280 bytes for weights with address 139939870146560 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.335 [cumem.py:171] Allocated 18874368 bytes for weights with address 13925089280 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.335 [cumem.py:171] Allocated 100663296 bytes for weights with address 13958643712 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.335 [cumem.py:171] Allocated 50331648 bytes for weights with address 14059307008 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.336 [cumem.py:171] Allocated 31457280 bytes for weights with address 14126415872 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.336 [cumem.py:171] Allocated 18874368 bytes for weights with address 14159970304 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.337 [cumem.py:171] Allocated 100663296 bytes for weights with address 14193524736 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.337 [cumem.py:171] Allocated 50331648 bytes for weights with address 14294188032 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.338 [cumem.py:171] Allocated 31457280 bytes for weights with address 14361296896 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.338 [cumem.py:171] Allocated 18874368 bytes for weights with address 14394851328 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.338 [cumem.py:171] Allocated 100663296 bytes for weights with address 14428405760 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.339 [cumem.py:171] Allocated 50331648 bytes for weights with address 14529069056 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.339 [cumem.py:171] Allocated 31457280 bytes for weights with address 14596177920 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.339 [cumem.py:171] Allocated 18874368 bytes for weights with address 14629732352 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.340 [cumem.py:171] Allocated 100663296 bytes for weights with address 14663286784 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.340 [cumem.py:171] Allocated 50331648 bytes for weights with address 14763950080 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.341 [cumem.py:171] Allocated 31457280 bytes for weights with address 14831058944 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.341 [cumem.py:171] Allocated 18874368 bytes for weights with address 14864613376 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.342 [cumem.py:171] Allocated 100663296 bytes for weights with address 14898167808 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.342 [cumem.py:171] Allocated 50331648 bytes for weights with address 14998831104 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.342 [cumem.py:171] Allocated 31457280 bytes for weights with address 15065939968 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.343 [cumem.py:171] Allocated 18874368 bytes for weights with address 15099494400 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.343 [cumem.py:171] Allocated 100663296 bytes for weights with address 15133048832 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.344 [cumem.py:171] Allocated 50331648 bytes for weights with address 15233712128 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.344 [cumem.py:171] Allocated 31457280 bytes for weights with address 15300820992 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.344 [cumem.py:171] Allocated 18874368 bytes for weights with address 15334375424 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.345 [cumem.py:171] Allocated 100663296 bytes for weights with address 15367929856 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.345 [cumem.py:171] Allocated 50331648 bytes for weights with address 15468593152 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.346 [cumem.py:171] Allocated 31457280 bytes for weights with address 15535702016 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.346 [cumem.py:171] Allocated 18874368 bytes for weights with address 15569256448 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.346 [cumem.py:171] Allocated 100663296 bytes for weights with address 15602810880 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.347 [cumem.py:171] Allocated 50331648 bytes for weights with address 15703474176 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.347 [cumem.py:171] Allocated 31457280 bytes for weights with address 15770583040 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.348 [cumem.py:171] Allocated 18874368 bytes for weights with address 15804137472 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.348 [cumem.py:171] Allocated 100663296 bytes for weights with address 15837691904 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.348 [cumem.py:171] Allocated 50331648 bytes for weights with address 15938355200 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.349 [cumem.py:171] Allocated 31457280 bytes for weights with address 16005464064 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.349 [cumem.py:171] Allocated 18874368 bytes for weights with address 16039018496 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.350 [cumem.py:171] Allocated 100663296 bytes for weights with address 16072572928 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.350 [cumem.py:171] Allocated 50331648 bytes for weights with address 16173236224 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.350 [cumem.py:171] Allocated 31457280 bytes for weights with address 16240345088 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.351 [cumem.py:171] Allocated 18874368 bytes for weights with address 16273899520 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.351 [cumem.py:171] Allocated 100663296 bytes for weights with address 16307453952 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.352 [cumem.py:171] Allocated 50331648 bytes for weights with address 16408117248 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.352 [cumem.py:171] Allocated 31457280 bytes for weights with address 16475226112 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.352 [cumem.py:171] Allocated 18874368 bytes for weights with address 16508780544 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.353 [cumem.py:171] Allocated 100663296 bytes for weights with address 16542334976 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.353 [cumem.py:171] Allocated 50331648 bytes for weights with address 16642998272 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.354 [cumem.py:171] Allocated 31457280 bytes for weights with address 16710107136 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.354 [cumem.py:171] Allocated 18874368 bytes for weights with address 16743661568 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.354 [cumem.py:171] Allocated 100663296 bytes for weights with address 16777216000 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.355 [cumem.py:171] Allocated 50331648 bytes for weights with address 16877879296 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.355 [cumem.py:171] Allocated 31457280 bytes for weights with address 16944988160 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.355 [cumem.py:171] Allocated 18874368 bytes for weights with address 16978542592 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.356 [cumem.py:171] Allocated 100663296 bytes for weights with address 17012097024 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.356 [cumem.py:171] Allocated 50331648 bytes for weights with address 17112760320 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.357 [cumem.py:171] Allocated 31457280 bytes for weights with address 17179869184 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.357 [cumem.py:171] Allocated 18874368 bytes for weights with address 17213423616 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.358 [cumem.py:171] Allocated 100663296 bytes for weights with address 17246978048 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.358 [cumem.py:171] Allocated 50331648 bytes for weights with address 17347641344 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.358 [cumem.py:171] Allocated 31457280 bytes for weights with address 17414750208 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.359 [cumem.py:171] Allocated 18874368 bytes for weights with address 17448304640 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.359 [cumem.py:171] Allocated 100663296 bytes for weights with address 17481859072 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.359 [cumem.py:171] Allocated 50331648 bytes for weights with address 17582522368 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.360 [cumem.py:171] Allocated 31457280 bytes for weights with address 17649631232 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.360 [cumem.py:171] Allocated 18874368 bytes for weights with address 17683185664 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.361 [cumem.py:171] Allocated 100663296 bytes for weights with address 17716740096 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.361 [cumem.py:171] Allocated 50331648 bytes for weights with address 17817403392 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.362 [cumem.py:171] Allocated 31457280 bytes for weights with address 17884512256 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.362 [cumem.py:171] Allocated 18874368 bytes for weights with address 17918066688 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.362 [cumem.py:171] Allocated 100663296 bytes for weights with address 17951621120 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.363 [cumem.py:171] Allocated 50331648 bytes for weights with address 18052284416 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.363 [cumem.py:171] Allocated 31457280 bytes for weights with address 18119393280 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.363 [cumem.py:171] Allocated 18874368 bytes for weights with address 18152947712 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.364 [cumem.py:171] Allocated 100663296 bytes for weights with address 18186502144 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.364 [cumem.py:171] Allocated 50331648 bytes for weights with address 18287165440 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.365 [cumem.py:171] Allocated 31457280 bytes for weights with address 18354274304 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.365 [cumem.py:171] Allocated 18874368 bytes for weights with address 18387828736 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.366 [cumem.py:171] Allocated 100663296 bytes for weights with address 18421383168 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.366 [cumem.py:171] Allocated 50331648 bytes for weights with address 18522046464 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.366 [cumem.py:171] Allocated 31457280 bytes for weights with address 18589155328 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.367 [cumem.py:171] Allocated 18874368 bytes for weights with address 18622709760 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.367 [cumem.py:171] Allocated 100663296 bytes for weights with address 18656264192 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.368 [cumem.py:171] Allocated 50331648 bytes for weights with address 18756927488 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.368 [cumem.py:171] Allocated 31457280 bytes for weights with address 18824036352 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.368 [cumem.py:171] Allocated 18874368 bytes for weights with address 18857590784 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.369 [cumem.py:171] Allocated 100663296 bytes for weights with address 18891145216 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.369 [cumem.py:171] Allocated 50331648 bytes for weights with address 18991808512 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.370 [cumem.py:171] Allocated 31457280 bytes for weights with address 19058917376 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.370 [cumem.py:171] Allocated 18874368 bytes for weights with address 19092471808 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.370 [cumem.py:171] Allocated 100663296 bytes for weights with address 19126026240 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.371 [cumem.py:171] Allocated 50331648 bytes for weights with address 19226689536 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.371 [cumem.py:171] Allocated 31457280 bytes for weights with address 19293798400 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.372 [cumem.py:171] Allocated 18874368 bytes for weights with address 19327352832 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.372 [cumem.py:171] Allocated 100663296 bytes for weights with address 19360907264 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.372 [cumem.py:171] Allocated 50331648 bytes for weights with address 19461570560 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.373 [cumem.py:171] Allocated 31457280 bytes for weights with address 19528679424 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.373 [cumem.py:171] Allocated 18874368 bytes for weights with address 19562233856 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.374 [cumem.py:171] Allocated 100663296 bytes for weights with address 19595788288 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.374 [cumem.py:171] Allocated 50331648 bytes for weights with address 19696451584 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.374 [cumem.py:171] Allocated 31457280 bytes for weights with address 19763560448 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.375 [cumem.py:171] Allocated 18874368 bytes for weights with address 19797114880 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.375 [cumem.py:171] Allocated 100663296 bytes for weights with address 19830669312 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.376 [cumem.py:171] Allocated 50331648 bytes for weights with address 19931332608 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.387 [backends.py:42] Using InductorAdaptor
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.402 [cumem.py:171] Allocated 788529152 bytes for weights with address 19998441472 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.402 [compilation.py:649] enabled custom ops: Counter()
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.402 [compilation.py:650] disabled custom ops: Counter({'rms_norm': 57, 'column_parallel_linear': 56, 'row_parallel_linear': 56, 'silu_and_mul': 28, 'vocab_parallel_embedding': 1, 'rotary_embedding': 1, 'parallel_lm_head': 1, 'logits_processor': 1})
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:04.402 [base_loader.py:48] Loading weights on cuda ...
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:00<00:00,  1.94it/s]
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:00<00:00,  2.59it/s]
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:00<00:00,  2.47it/s]
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m 
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:05.257 [default_loader.py:267] Loading weights took 0.85 seconds
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:05.644 [gpu_model_runner.py:2653] Model loading took 6.0160 GiB and 0.998091 seconds
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:05.645 [cumem.py:183] Freed 788529152 bytes for weights with address 19998441472 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:05.836 [decorators.py:256] Start compiling function <code object forward at 0x173a53b0, file "/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 381>
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:08.555 [backends.py:501] Traced files (to be considered for compilation cache):
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:08.555 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/torch/_dynamo/polyfills/__init__.py
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:08.555 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/torch/nn/modules/container.py
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:08.555 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/attention/layer.py
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:08.555 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/distributed/communication_op.py
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:08.555 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/distributed/parallel_state.py
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:08.555 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/custom_op.py
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:08.555 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/layers/activation.py
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:08.555 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/layers/layernorm.py
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:08.555 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:08.555 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/layers/rotary_embedding/base.py
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:08.555 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/layers/rotary_embedding/common.py
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:08.555 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/layers/utils.py
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:08.555 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/layers/vocab_parallel_embedding.py
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:08.555 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/model_executor/models/llama.py
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:08.555 [backends.py:501] /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/.vllm/lib/python3.11/site-packages/vllm/platforms/interface.py
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:08.865 [backends.py:548] Using cache directory: /local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/backbone for vLLM's torch.compile
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:08.866 [backends.py:559] Dynamo bytecode transform time: 3.03 s
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.046 [backends.py:127] Directly load the 0-th graph for dynamic shape from inductor via handle ('frkg34ejix6bmq5r36t3h4ynjemi7tyy7yjeskomutxm7cjpivi7', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/3c/c3cypexe64fms4jawzmylzmympjb6wtcz3oyvcvrv7jhqpvl6zti.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.088 [backends.py:127] Directly load the 1-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.127 [backends.py:127] Directly load the 2-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.166 [backends.py:127] Directly load the 3-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.205 [backends.py:127] Directly load the 4-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.245 [backends.py:127] Directly load the 5-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.285 [backends.py:127] Directly load the 6-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.325 [backends.py:127] Directly load the 7-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.365 [backends.py:127] Directly load the 8-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.404 [backends.py:127] Directly load the 9-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.444 [backends.py:127] Directly load the 10-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.484 [backends.py:127] Directly load the 11-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.524 [backends.py:127] Directly load the 12-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.563 [backends.py:127] Directly load the 13-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.604 [backends.py:127] Directly load the 14-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.644 [backends.py:127] Directly load the 15-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.683 [backends.py:127] Directly load the 16-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.723 [backends.py:127] Directly load the 17-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.763 [backends.py:127] Directly load the 18-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.803 [backends.py:127] Directly load the 19-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.843 [backends.py:127] Directly load the 20-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.883 [backends.py:127] Directly load the 21-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.923 [backends.py:127] Directly load the 22-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:09.963 [backends.py:127] Directly load the 23-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:10.003 [backends.py:127] Directly load the 24-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:10.043 [backends.py:127] Directly load the 25-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:10.083 [backends.py:127] Directly load the 26-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:10.123 [backends.py:127] Directly load the 27-th graph for dynamic shape from inductor via handle ('fhjrxxasvdc4qjgtw5rezdlfm5yufj3xqarketx3iwzrlbobrmpd', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/qt/cqta6n3dqjisgc3iaofb7yewpfqnkstfklmrnmvtasgfxzpuaz3q.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:10.135 [backends.py:127] Directly load the 28-th graph for dynamic shape from inductor via handle ('f5w5fdrq4lx4ngfnkdeztoj5jcfx4s5xr67ixmzd6qwwf6seikmb', '/local/huzaifa/.cache/vllm/torch_compile_cache/98d36b26cd/rank_0_0/inductor_cache/sw/cswmu2kg747hrtykl2x7saktbitneybzl5qnfelvo6zfmnnorcy7.py')
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:10.135 [backends.py:164] Directly load the compiled graph(s) for dynamic shape from the cache, took 1.108 s
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:10.794 [monitor.py:34] torch.compile takes 3.03 s in total
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.412 [gpu_worker.py:284] Initial free memory: 43.90 GiB; Requested memory: 0.90 (util), 39.95 GiB
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.412 [gpu_worker.py:291] Free memory after profiling: 37.78 GiB (total), 33.83 GiB (within requested)
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.412 [gpu_worker.py:297] Memory profiling takes 5.58 seconds. Total non KV cache memory: 6.50GiB; torch peak memory increase: 1.19GiB; non-torch forward increase memory: -0.70GiB; weights memory: 6.02GiB.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:11.413 [gpu_worker.py:298] Available KV cache memory: 33.45 GiB
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:11.652 [kv_cache_utils.py:1087] GPU KV cache size: 313,152 tokens
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:11.652 [kv_cache_utils.py:1091] Maximum concurrency for 131,072 tokens per request: 2.39x
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.653 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 20803747840 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.654 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 22112370688 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.654 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 23420993536 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.655 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 24729616384 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.655 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 26038239232 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.655 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 27346862080 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.655 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 28655484928 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.656 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 29964107776 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.656 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 31272730624 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.656 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 32581353472 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.656 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 33889976320 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.657 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 35198599168 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.657 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 36507222016 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.657 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 37815844864 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.658 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 39124467712 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.658 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 40433090560 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.658 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 41741713408 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.658 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 43050336256 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.659 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 44358959104 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.659 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 45667581952 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.659 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 46976204800 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.659 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 48284827648 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.660 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 49593450496 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.660 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 50902073344 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.660 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 52210696192 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.661 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 53519319040 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.661 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 54827941888 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.661 [cumem.py:171] Allocated 1283457024 bytes for kv_cache with address 56136564736 from cumem allocator
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/67 [00:00<?, ?it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.920 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=512, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.947 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=504, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.973 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=496, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:11.999 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=488, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   6%|▌         | 4/67 [00:00<00:01, 37.42it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.026 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=480, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.052 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=472, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.078 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=464, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.104 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=456, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  12%|█▏        | 8/67 [00:00<00:01, 37.88it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.130 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=448, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.156 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=440, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.182 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=432, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.209 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=424, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  18%|█▊        | 12/67 [00:00<00:01, 38.02it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.235 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=416, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.261 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=408, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.288 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=400, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.314 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=392, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  24%|██▍       | 16/67 [00:00<00:01, 37.92it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.339 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=384, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.364 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=376, uniform_decode=False))
+[1;36m(APIServer pid=1791316)[0;0m DEBUG 11-24 10:39:12.380 [utils.py:776] Waiting for 1 local, 0 remote core engine proc(s) to start.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.390 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=368, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.414 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=360, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  30%|██▉       | 20/67 [00:00<00:01, 38.57it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.440 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=352, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.465 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=344, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.490 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=336, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.515 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=328, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  36%|███▌      | 24/67 [00:00<00:01, 38.99it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.540 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=320, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.566 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=312, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.590 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=304, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.614 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=296, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.638 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=288, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  43%|████▎     | 29/67 [00:00<00:00, 39.66it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.661 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=280, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.684 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=272, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.707 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=264, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.736 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=256, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.760 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=248, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  51%|█████     | 34/67 [00:00<00:00, 39.97it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.784 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=240, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.808 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=232, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.832 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=224, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.855 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=216, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.879 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=208, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  58%|█████▊    | 39/67 [00:00<00:00, 40.66it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.903 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=200, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.926 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=192, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.949 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=184, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.972 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=176, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:12.995 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=168, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  66%|██████▌   | 44/67 [00:01<00:00, 41.38it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.018 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=160, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.049 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=152, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.073 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=144, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.095 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=136, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.119 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=128, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  73%|███████▎  | 49/67 [00:01<00:00, 41.04it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.142 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=120, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.164 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=112, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.187 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=104, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.210 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=96, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.233 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=88, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  81%|████████  | 54/67 [00:01<00:00, 41.92it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.256 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=80, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.279 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=72, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.301 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=64, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.323 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=56, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.346 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=48, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  88%|████████▊ | 59/67 [00:01<00:00, 42.64it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.368 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=40, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.390 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=32, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.412 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=24, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.433 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=16, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.455 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=8, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  96%|█████████▌| 64/67 [00:01<00:00, 43.52it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.476 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=4, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.498 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=2, uniform_decode=False))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.530 [cuda_graph.py:136] Capturing a cudagraph on (PIECEWISE,BatchDescriptor(num_tokens=1, uniform_decode=False))
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 67/67 [00:01<00:00, 40.79it/s]
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m Capturing CUDA graphs (decode, FULL):   0%|          | 0/35 [00:00<?, ?it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.564 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=256, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.590 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=248, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.614 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=240, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.639 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=232, uniform_decode=True))
+Capturing CUDA graphs (decode, FULL):  11%|█▏        | 4/35 [00:00<00:00, 38.14it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.665 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=224, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.689 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=216, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.713 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=208, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.736 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=200, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.760 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=192, uniform_decode=True))
+Capturing CUDA graphs (decode, FULL):  26%|██▌       | 9/35 [00:00<00:00, 40.55it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.783 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=184, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.806 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=176, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.829 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=168, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.851 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=160, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.873 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=152, uniform_decode=True))
+Capturing CUDA graphs (decode, FULL):  40%|████      | 14/35 [00:00<00:00, 42.12it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.896 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=144, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.918 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=136, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.940 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=128, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.962 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=120, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:13.984 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=112, uniform_decode=True))
+Capturing CUDA graphs (decode, FULL):  54%|█████▍    | 19/35 [00:00<00:00, 43.40it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:14.005 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=104, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:14.027 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=96, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:14.050 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=88, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:14.072 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=80, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:14.094 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=72, uniform_decode=True))
+Capturing CUDA graphs (decode, FULL):  69%|██████▊   | 24/35 [00:00<00:00, 44.18it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:14.115 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=64, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:14.135 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=56, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:14.156 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=48, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:14.176 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=40, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:14.196 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=32, uniform_decode=True))
+Capturing CUDA graphs (decode, FULL):  83%|████████▎ | 29/35 [00:00<00:00, 45.62it/s][1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:14.217 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=24, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:14.237 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=16, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:14.256 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=8, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:14.276 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=4, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:14.295 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=2, uniform_decode=True))
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:14.314 [cuda_graph.py:136] Capturing a cudagraph on (FULL,BatchDescriptor(num_tokens=1, uniform_decode=True))
+Capturing CUDA graphs (decode, FULL): 100%|██████████| 35/35 [00:00<00:00, 47.46it/s]Capturing CUDA graphs (decode, FULL): 100%|██████████| 35/35 [00:00<00:00, 44.99it/s]
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:14.582 [gpu_model_runner.py:3480] Graph capturing finished in 3 secs, took 0.55 GiB
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:14.582 [gpu_worker.py:393] Free memory on device (43.9/44.39 GiB) on startup. Desired GPU memory utilization is (0.9, 39.95 GiB). Actual usage is 6.02 GiB for weight, 1.19 GiB for peak activation, -0.7 GiB for non-torch memory, and 0.55 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=35165692518` (32.75 GiB) to fit into requested memory, or `--kv-cache-memory=39405681664` (36.7 GiB) to fully utilize gpu memory. Current kv cache memory in use is 33.45 GiB.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:14.596 [core.py:210] init engine (profile, create kv cache, warmup model) took 8.95 seconds
+[1;36m(APIServer pid=1791316)[0;0m DEBUG 11-24 10:39:14.893 [utils.py:859] READY from local core engine process 0.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.079 [loggers.py:147] Engine 000: vllm cache_config_info with initialization after num_gpu_blocks is: 19572
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:15.153 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:15.153 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:15.194 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.195 [api_server.py:1634] Supported_tasks: ['generate']
+[1;36m(APIServer pid=1791316)[0;0m WARNING 11-24 10:39:15.196 [model.py:1389] Default sampling parameters have been overridden by the model's Hugging Face generation config recommended from the model creator. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.197 [serving_responses.py:137] Using default chat sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.198 [serving_chat.py:139] Using default chat sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.199 [serving_completion.py:76] Using default completion sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.199 [api_server.py:1912] Starting vLLM API server 0 on http://0.0.0.0:8500
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.200 [launcher.py:34] Available routes are:
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.200 [launcher.py:42] Route: /openapi.json, Methods: GET, HEAD
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.200 [launcher.py:42] Route: /docs, Methods: GET, HEAD
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.200 [launcher.py:42] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.200 [launcher.py:42] Route: /redoc, Methods: GET, HEAD
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.200 [launcher.py:42] Route: /health, Methods: GET
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.201 [launcher.py:42] Route: /load, Methods: GET
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.201 [launcher.py:42] Route: /ping, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.201 [launcher.py:42] Route: /ping, Methods: GET
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.201 [launcher.py:42] Route: /tokenize, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.201 [launcher.py:42] Route: /detokenize, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.201 [launcher.py:42] Route: /v1/models, Methods: GET
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.202 [launcher.py:42] Route: /version, Methods: GET
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.202 [launcher.py:42] Route: /v1/responses, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.202 [launcher.py:42] Route: /v1/responses/{response_id}, Methods: GET
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.202 [launcher.py:42] Route: /v1/responses/{response_id}/cancel, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.202 [launcher.py:42] Route: /v1/chat/completions, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.202 [launcher.py:42] Route: /v1/completions, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.203 [launcher.py:42] Route: /v1/embeddings, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.203 [launcher.py:42] Route: /pooling, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.203 [launcher.py:42] Route: /classify, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.203 [launcher.py:42] Route: /score, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.203 [launcher.py:42] Route: /v1/score, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.203 [launcher.py:42] Route: /v1/audio/transcriptions, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.204 [launcher.py:42] Route: /v1/audio/translations, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.204 [launcher.py:42] Route: /rerank, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.204 [launcher.py:42] Route: /v1/rerank, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.204 [launcher.py:42] Route: /v2/rerank, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.204 [launcher.py:42] Route: /server_info, Methods: GET
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.204 [launcher.py:42] Route: /reset_prefix_cache, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.204 [launcher.py:42] Route: /sleep, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.205 [launcher.py:42] Route: /wake_up, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.205 [launcher.py:42] Route: /is_sleeping, Methods: GET
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.205 [launcher.py:42] Route: /collective_rpc, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.205 [launcher.py:42] Route: /scale_elastic_ep, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.205 [launcher.py:42] Route: /is_scaling_elastic_ep, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.205 [launcher.py:42] Route: /invocations, Methods: POST
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:15.206 [launcher.py:42] Route: /metrics, Methods: GET
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:16.027 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:16.028 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:16.098 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:16.099 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:16.111 [core.py:743] EngineCore loop active.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:18.756 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:18.840 [block_pool.py:378] Successfully reset prefix cache
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:18.840 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:19.030 [cumem.py:228] CuMemAllocator: sleep freed 39.52 GiB memory in total, of which 0.00 GiB is backed up in CPU and the rest 39.52 GiB is discarded directly.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:19.042 [gpu_worker.py:117] Sleep mode freed 40.69 GiB memory, 1.12 GiB memory is still in use.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:19.042 [executor_base.py:189] It took 0.200988 seconds to fall asleep.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:19.042 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:19.058 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:19.058 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:25.375 [loggers.py:127] Engine 000: Avg prompt throughput: 1.3 tokens/s, Avg generation throughput: 24.9 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:35.376 [loggers.py:127] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:45.301 [api_server.py:1016] wake up the engine with tags: None
+[1;36m(APIServer pid=1791316)[0;0m DEBUG 11-24 10:39:45.377 [loggers.py:127] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:45.816 [executor_base.py:205] It took 0.514514 seconds to wake up tags {'kv_cache', 'weights'}.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:45.817 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:45.821 [gpu_model_runner.py:2705] Reloading weights inplace...
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:00<00:00,  1.95it/s]
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:00<00:00,  2.60it/s]
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:00<00:00,  2.47it/s]
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m 
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:46.672 [default_loader.py:267] Loading weights took 0.85 seconds
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:46.673 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:46.676 [api_server.py:997] Resetting prefix cache with specific None...
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:46.678 [block_pool.py:378] Successfully reset prefix cache
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:46.678 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:46.692 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:46.693 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:46.765 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:46.766 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:46.772 [core.py:743] EngineCore loop active.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:49.416 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:49.499 [block_pool.py:378] Successfully reset prefix cache
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:49.500 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:49.690 [cumem.py:228] CuMemAllocator: sleep freed 39.52 GiB memory in total, of which 0.00 GiB is backed up in CPU and the rest 39.52 GiB is discarded directly.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:49.691 [gpu_worker.py:117] Sleep mode freed 39.52 GiB memory, 2.37 GiB memory is still in use.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:49.691 [executor_base.py:189] It took 0.190661 seconds to fall asleep.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:49.691 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:49.706 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:49.707 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:54.359 [api_server.py:1016] wake up the engine with tags: None
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:54.860 [executor_base.py:205] It took 0.500337 seconds to wake up tags {'kv_cache', 'weights'}.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:54.861 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:54.865 [gpu_model_runner.py:2705] Reloading weights inplace...
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:55.377 [loggers.py:127] Engine 000: Avg prompt throughput: 1.3 tokens/s, Avg generation throughput: 25.6 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:00<00:00,  1.88it/s]
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:00<00:00,  2.54it/s]
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:00<00:00,  2.41it/s]
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m 
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:55.738 [default_loader.py:267] Loading weights took 0.87 seconds
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:55.739 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:55.742 [api_server.py:997] Resetting prefix cache with specific None...
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:55.744 [block_pool.py:378] Successfully reset prefix cache
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:55.744 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:55.758 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:55.759 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:55.830 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:55.831 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:55.838 [core.py:743] EngineCore loop active.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:58.482 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:58.565 [block_pool.py:378] Successfully reset prefix cache
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:58.566 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:58.756 [cumem.py:228] CuMemAllocator: sleep freed 39.52 GiB memory in total, of which 0.00 GiB is backed up in CPU and the rest 39.52 GiB is discarded directly.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:58.757 [gpu_worker.py:117] Sleep mode freed 39.52 GiB memory, 2.37 GiB memory is still in use.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:39:58.757 [executor_base.py:189] It took 0.190749 seconds to fall asleep.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:58.758 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:39:58.773 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:39:58.774 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:40:03.412 [api_server.py:1016] wake up the engine with tags: None
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:40:03.912 [executor_base.py:205] It took 0.498681 seconds to wake up tags {'kv_cache', 'weights'}.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:40:03.913 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:40:03.917 [gpu_model_runner.py:2705] Reloading weights inplace...
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:00<00:00,  1.86it/s]
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:00<00:00,  2.52it/s]
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:00<00:00,  2.39it/s]
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m 
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:40:04.797 [default_loader.py:267] Loading weights took 0.88 seconds
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:40:04.798 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:40:04.801 [api_server.py:997] Resetting prefix cache with specific None...
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:40:04.802 [block_pool.py:378] Successfully reset prefix cache
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:40:04.802 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:40:04.816 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:40:04.817 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:40:04.888 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:40:04.889 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:40:04.895 [core.py:743] EngineCore loop active.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:40:05.377 [loggers.py:127] Engine 000: Avg prompt throughput: 2.6 tokens/s, Avg generation throughput: 30.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:40:07.540 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:40:07.623 [block_pool.py:378] Successfully reset prefix cache
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:40:07.623 [core.py:737] EngineCore waiting for work.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:40:07.813 [cumem.py:228] CuMemAllocator: sleep freed 39.52 GiB memory in total, of which 0.00 GiB is backed up in CPU and the rest 39.52 GiB is discarded directly.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:40:07.815 [gpu_worker.py:117] Sleep mode freed 39.52 GiB memory, 2.37 GiB memory is still in use.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m INFO 11-24 10:40:07.815 [executor_base.py:189] It took 0.190447 seconds to fall asleep.
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:40:07.815 [core.py:737] EngineCore waiting for work.
+[1;36m(APIServer pid=1791316)[0;0m INFO 11-24 10:40:07.830 [api_server.py:1024] check whether the engine is sleeping
+[1;36m(EngineCore_DP0 pid=1791469)[0;0m DEBUG 11-24 10:40:07.831 [core.py:737] EngineCore waiting for work.
