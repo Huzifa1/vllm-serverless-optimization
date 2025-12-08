@@ -1,0 +1,5 @@
+{
+    "/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b": 8500,
+    "/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b": 8501,
+    "/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b": 8502
+}
