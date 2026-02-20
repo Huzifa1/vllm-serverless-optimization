@@ -540,7 +540,10 @@ async def benchmark(
     model_to_port_map_file: str = None,
     sleep_level: int = 2,
     check_every: float = 0.1,
-    wakeup_timeout: float = 10
+    wakeup_timeout: float = 10,
+    
+    # HUZI: Arugments for MIG
+    use_mig: bool = False,
 ):
     task_type = (TaskType.EMBEDDING if api_url.endswith("/v1/embeddings") else
                  TaskType.GENERATION)
@@ -596,8 +599,8 @@ async def benchmark(
         extra_body=extra_body,
     )    
 
-    # HUZI: if custom_scheduler, assume all engine are ready (for simplicity)
-    if ready_check_timeout_sec > 0 and not custom_scheduler:
+    # HUZI: if custom_scheduler or use_mig, assume all engine are ready (for simplicity)
+    if ready_check_timeout_sec > 0 and not custom_scheduler and not use_mig:
         test_output = await wait_for_endpoint(
             request_func,
             test_input,
@@ -659,7 +662,7 @@ async def benchmark(
     semaphore = (asyncio.Semaphore(max_concurrency)
                  if max_concurrency else None)
     
-    # Read map file & set scheduler
+    # HUZI: Read map file & set scheduler
     model_to_port_map = None
     scheduler = None
     if custom_scheduler:
@@ -672,14 +675,22 @@ async def benchmark(
             check_every=check_every,
             timeout=wakeup_timeout
         )
+        # Make sure to set active model correctly, in case all 
+        # initalized instances are not sleeping by default
+        await scheduler.set_active_model()
+        
+    # HUZI: If MIG is used, read map file
+    if use_mig:
+        model_to_port_map = read_model_to_port_map(model_to_port_map_file)
 
     async def limited_request_func(
         request_func_input: RequestFuncInput,
         session, pbar,
         raw_request: SampleRequest, custom_scheduler
     ):
-        # HUZI: Before sending request, do some modifications if it's custom_scheduler
-        if custom_scheduler:     
+        # HUZI: Before sending request, do some modifications
+        # if it's custom_scheduler or use_mig
+        if custom_scheduler or use_mig:     
             # HUZI: Change port based on port mappings file (take as arg)
             
             # Get port
@@ -690,7 +701,7 @@ async def benchmark(
             new_api_url = replace_port(request_func_input.api_url, new_port)
             request_func_input.api_url = new_api_url        
             request_func_input.model_name = raw_request.model_name
-             
+
         
         print(f"Sending request for model {request_func_input.model_name}", flush=True)
         
@@ -1374,6 +1385,14 @@ def add_cli_args(parser: argparse.ArgumentParser):
         help="Maximum time to wait for the server to wakeup "
         "or sleep in seconds (default: 10 seconds)."
     )
+    
+    # HUZI: New arguments for using MIG
+    parser.add_argument(
+        "--use-mig",
+        action="store_true",
+        help="If specified, the benchmark will target GPU instances "
+        "with MIG enabled."
+    )
 
 
 def main(args: argparse.Namespace) -> dict[str, Any]:
@@ -1406,24 +1425,24 @@ async def main_async(args: argparse.Namespace) -> dict[str, Any]:
                 "For exponential ramp-up, the start RPS cannot be 0.")
 
     # HUZI: Check if --custom-scheduler and --model is not specified
-    if not args.custom_scheduler and not args.model:
+    if (not args.custom_scheduler and not args.use_mig) and not args.model:
         raise ValueError(
-                "--model is required when --custom-scheduler is False.")
+                "--model is required when --custom-scheduler and --use-mig are False.")
         
-    if args.custom_scheduler:
+    if args.custom_scheduler or args.use_mig:
         # Check if required args are available
         if not args.model_to_port_map_file:
             raise ValueError(
-                "--model_to_port_map_file is required when --custom-scheduler is True.")
+                "--model_to_port_map_file is required when --custom-scheduler or --use-mig is True.")
 
     label = args.label
     model_id = args.model
     model_name = args.served_model_name
     
-    # HUZI: If cusome-schedluer, this means there are multiple models ->
+    # HUZI: If cusome-schedluer or use-mig, this means there are multiple models ->
     # multiple tokenizers. The idea is to get all tokenizers in one dict
     tokenizers = {}
-    if args.custom_scheduler:
+    if args.custom_scheduler or args.use_mig:
         # Check number of available models, based on model_to_port_map
         model_to_port_map = read_model_to_port_map(args.model_to_port_map_file)
         for model in model_to_port_map.keys():
@@ -1525,7 +1544,8 @@ async def main_async(args: argparse.Namespace) -> dict[str, Any]:
         model_to_port_map_file=args.model_to_port_map_file,
         sleep_level=args.sleep_level,
         check_every=args.check_every,
-        wakeup_timeout=args.wakeup_timeout
+        wakeup_timeout=args.wakeup_timeout,
+        use_mig=args.use_mig,
     )
 
     # Save config and results to json
@@ -1583,7 +1603,7 @@ async def main_async(args: argparse.Namespace) -> dict[str, Any]:
         # Save to file
     if args.save_result or args.append_result:
         # HUZI: No base_model in this case, just ignore it
-        if args.custom_scheduler:
+        if args.custom_scheduler or args.use_mig:
             base_model_id = ""
         else:
             base_model_id = model_id.split("/")[-1]

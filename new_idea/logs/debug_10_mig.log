@@ -1,0 +1,89 @@
+INFO 02-19 17:26:34 [__init__.py:241] Automatically detected platform cuda.
+Namespace(subparser='bench', bench_type='serve', dispatch_function=<function BenchmarkServingSubcommand.cmd at 0x7fb2a09d0040>, seed=0, num_prompts=10, dataset_name='custom', no_stream=False, dataset_path='/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/new_idea/traces/modified_conversation_trace_10.jsonl', no_oversample=False, custom_output_len=256, custom_skip_chat_template=True, spec_bench_output_len=256, spec_bench_category=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, blazedit_min_distance=0.0, blazedit_max_distance=1.0, random_input_len=1024, random_output_len=128, random_range_ratio=0.0, random_prefix_len=0, random_batch_size=1, random_mm_base_items_per_request=1, random_mm_num_mm_items_range_ratio=0.0, random_mm_limit_mm_per_prompt={'image': 255, 'video': 0}, random_mm_bucket_config={(256, 256, 1): 0.5, (720, 1280, 1): 0.5, (720, 1280, 16): 0.0}, hf_subset=None, hf_split=None, hf_name=None, hf_output_len=None, prefix_repetition_prefix_len=256, prefix_repetition_suffix_len=256, prefix_repetition_num_prefixes=10, prefix_repetition_output_len=128, label=None, backend='vllm', endpoint_type=None, base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', header=None, max_concurrency=None, model=None, tokenizer=None, use_beam_search=False, logprobs=None, request_rate=inf, burstiness=1.0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, append_result=False, metadata=None, result_dir=None, result_filename='/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/new_idea/logs/bench_results_llama3-3b_10.json', ignore_eos=False, percentile_metrics='ttft,tpot,itl', metric_percentiles='95,99', goodput=None, request_id_prefix='benchmark-serving', top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, ramp_up_strategy=None, ramp_up_start_rps=None, ramp_up_end_rps=None, ready_check_timeout_sec=600, use_timestamp=True, custom_scheduler=False, model_to_port_map_file='/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/new_idea/model_to_port_map.json', sleep_level=2, check_every=0.1, wakeup_timeout=10, use_mig=True)
+Starting initial single prompt test run...
+Skipping endpoint ready check.
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: None
+Sending request for model /local/huzaifa/workspace/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/models/llama3-3b
+
+                             Output tokens per second
+  600 +---------------------------------------------------------------------+
+      |                                           *                         |
+      |                                          * **                       |
+  500 |                                          *   **                     |
+      |                                         *      *                    |
+      |                                         *       *                   |
+  400 |                                        *         *                  |
+      |                                       *          *                  |
+      |                                       *           *                 |
+  300 |                                      *             *                |
+      |******                              **               *               |
+      |      ***        *                 *                  *              |
+      |         *      * **          *****                    *             |
+  200 |         *      *   **      **                          **           |
+      |          *    *      **  **                              ***        |
+      |          *   *         **                                   **      |
+  100 |           * *                                                 **    |
+      |           * *                                                   *   |
+      |            *                                                     ** |
+    0 +---------------------------------------------------------------------+
+      0        2        4       6        8        10       12      14       16
+
+                         Concurrent requests per second
+  5 +-----------------------------------------------------------------------+
+    |                                        *    *                         |
+    |                                       *      **                       |
+    |                                       *        *                      |
+  4 |                          *           *          *****                 |
+    |                         * *          *               *                |
+    |                         * *         *                *                |
+    |                        *   *        *                 *               |
+  3 |             *****      *    *      *                   *              |
+    |           **     **   *      *     *                    *             |
+    |         **         ** *      *    *                     *             |
+  2 |*********             *        *****                      *****        |
+    |                                                               *       |
+    |                                                                **     |
+    |                                                                  *    |
+  1 |                                                                   *   |
+    |                                                                    *  |
+    |                                                                     * |
+    |                                                                      *|
+  0 +-----------------------------------------------------------------------+
+    0        2        4        6        8        10       12       14       16
+============ Serving Benchmark Result ============
+Successful requests:                     10        
+Benchmark duration (s):                  15.55     
+Total input tokens:                      75166     
+Total generated tokens:                  3934      
+Request throughput (req/s):              0.64      
+Output token throughput (tok/s):         253.04    
+Peak output token throughput (tok/s):    576.00    
+Peak concurrent requests:                5.00      
+Total Token throughput (tok/s):          5087.85   
+---------------Time to First Token----------------
+Mean TTFT (ms):                          497.56    
+Median TTFT (ms):                        640.57    
+P95 TTFT (ms):                           888.41    
+P99 TTFT (ms):                           982.49    
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          11.95     
+Median TPOT (ms):                        10.40     
+P95 TPOT (ms):                           24.49     
+P99 TPOT (ms):                           31.56     
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           9.27      
+Median ITL (ms):                         9.59      
+P95 ITL (ms):                            10.63     
+P99 ITL (ms):                            12.40     
+==================================================

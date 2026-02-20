@@ -1,0 +1,106 @@
+Set parameter Username
+Set parameter LicenseID to value 2752871
+Academic license - for non-commercial use only - expires 2026-12-11
+Set parameter OutputFlag to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: AMD EPYC 9354 32-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 32 threads
+
+Optimize a model with 533 rows, 151 columns and 1454 nonzeros (Min)
+Model fingerprint: 0x407bef29
+Model has 1 linear objective coefficients
+Variable types: 21 continuous, 130 integer (130 binary)
+Coefficient statistics:
+  Matrix range     [3e-01, 1e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+03]
+Presolve removed 136 rows and 2 columns
+Presolve time: 0.00s
+Presolved: 397 rows, 149 columns, 1175 nonzeros
+Variable types: 19 continuous, 130 integer (129 binary)
+Found heuristic solution: objective 21.5581000
+Found heuristic solution: objective 20.4691000
+
+Root relaxation: objective 1.447562e+00, 224 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    1.44756    0  114   20.46910    1.44756  92.9%     -    0s
+H    0     0                      20.0034000    1.44756  92.8%     -    0s
+H    0     0                      19.8251000    8.05055  59.4%     -    0s
+     0     0   11.44580    0   16   19.82510   11.44580  42.3%     -    0s
+H    0     0                      19.8229000   11.44580  42.3%     -    0s
+     0     0   11.44580    0   18   19.82290   11.44580  42.3%     -    0s
+     0     0   11.44580    0   18   19.82290   11.44580  42.3%     -    0s
+     0     0   11.44580    0   22   19.82290   11.44580  42.3%     -    0s
+     0     0   11.44580    0    4   19.82290   11.44580  42.3%     -    0s
+H    0     0                      17.9979000   11.44580  36.4%     -    0s
+H    0     0                      17.7854000   11.44580  35.6%     -    0s
+     0     0   11.44580    0    6   17.78540   11.44580  35.6%     -    0s
+     0     0   11.44580    0    6   17.78540   11.44580  35.6%     -    0s
+     0     0   11.44580    0    7   17.78540   11.44580  35.6%     -    0s
+     0     0   11.44580    0    7   17.78540   11.44580  35.6%     -    0s
+     0     0   11.44580    0    7   17.78540   11.44580  35.6%     -    0s
+     0     2   11.44580    0    7   17.78540   11.44580  35.6%     -    0s
+H  278   280                      17.5162000   11.44580  34.7%  13.2    0s
+H 1384   981                      17.5162000   11.44580  34.7%  10.4    0s
+H 8048  2473                      17.5161893   11.44580  34.7%  11.6    0s
+ 59312  3190 infeasible   31        17.51619   11.44580  34.7%  35.4    5s
+
+Cutting planes:
+  Gomory: 27
+  Cover: 5
+  Implied bound: 46
+  Projected implied bound: 8
+  MIR: 355
+  Mixing: 10
+  StrongCG: 1
+  Flow cover: 1426
+  Inf proof: 7
+  Zero half: 6
+  RLT: 8
+  Relax-and-lift: 10
+
+Explored 85715 nodes (2778794 simplex iterations) in 5.95 seconds (9.49 work units)
+Thread count was 32 (of 64 available processors)
+
+Solution count 10: 17.5162 17.5162 17.5162 ... 21.5581
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.751618931071e+01, best bound 1.751618931071e+01, gap 0.0000%
+
+=== Optimal schedule ===
+Models: ['llama3-3b', 'qwen-1.8b', 'qwen2.5-3b']
+Makespan (C_max): 17.5162
+
+Stage 0: model=llama3-3b, start=1.0650, end=5.8595
+  jobs: [1]
+Stage 1: model=llama3-3b, start=5.8595, end=5.8595
+  jobs: []
+Stage 2: model=qwen2.5-3b, start=6.9505, end=9.9785
+  jobs: [0, 2, 3, 4, 5]
+Stage 3: model=qwen2.5-3b, start=9.9785, end=11.7308
+  jobs: [6, 7]
+Stage 4: model=qwen-1.8b, start=12.5148, end=13.9574
+  jobs: [8]
+Stage 5: model=llama3-3b, start=15.0704, end=17.5162
+  jobs: [9]
+Stage 6: model=llama3-3b, start=17.5162, end=17.5162
+  jobs: []
+
+Job-level report (job_id, model, release, proc_time, sent_time, completion_time):
+  0, qwen2.5-3b, r=0.0000, p=1.7486, sent=6.9505, done=8.6991
+  1, llama3-3b, r=0.0000, p=4.7945, sent=1.0650, done=5.8595
+  2, qwen2.5-3b, r=3.0000, p=0.9050, sent=6.9505, done=7.8555
+  3, qwen2.5-3b, r=3.0000, p=2.6550, sent=6.9505, done=9.6055
+  4, qwen2.5-3b, r=6.0000, p=0.3618, sent=6.9505, done=7.3123
+  5, qwen2.5-3b, r=6.0000, p=3.0280, sent=6.9505, done=9.9785
+  6, qwen2.5-3b, r=6.0000, p=0.3082, sent=9.9785, done=10.2867
+  7, qwen2.5-3b, r=9.0000, p=1.7523, sent=9.9785, done=11.7308
+  8, qwen-1.8b, r=9.0000, p=1.4426, sent=12.5148, done=13.9574
+  9, llama3-3b, r=9.0000, p=2.4458, sent=15.0704, done=17.5162
+
+Wrote schedule to schedule_output.json

@@ -31,7 +31,7 @@ class ModelScheduler:
         self.check_every = check_every
         self.timeout = timeout
 
-        logger.debug(f"Creating ModelScheduler with baseurl {self.base_url}")
+        logger.info(f"Creating ModelScheduler with baseurl {self.base_url}")
 
         # FIFO queue of (model_name, coro_factory, future)
         # coro_factory: Callable[[str], Awaitable[Any]] which will be called with the model-specific base_url
@@ -47,6 +47,17 @@ class ModelScheduler:
         self._inflight_by_model: Dict[str, Set[asyncio.Task]] = {}
 
         self._closed = False
+        
+    async def set_active_model(self):
+        # Check if any model is awake, then set _active_model
+        for model in self.model_to_port_map.keys():
+            tmp_base_url = self._model_base_url(model)
+            clean_base_url = self._strip_path(tmp_base_url)
+            if not await self._is_server_sleeping(clean_base_url):
+                logger.info(f"Found awake model {model}. Setting it as active model")
+                self._active_model = model
+                # Break, since there can only be one active model currently (one GPU)
+                break
 
     def _model_base_url(self, model_name: str) -> str:
         """Return base_url but with the port replaced by model_to_port_map[model_name]."""
@@ -70,7 +81,7 @@ class ModelScheduler:
         new_parsed = parsed._replace(netloc=netloc)
         return urllib.parse.urlunparse(new_parsed)
 
-    def strip_path(self, url: str) -> str:
+    def _strip_path(self, url: str) -> str:
         """
         Removes any path portion from a URL (everything after host:port).
         Returns only scheme://host:port
@@ -117,7 +128,7 @@ class ModelScheduler:
         Note: If switching between different non-None models, wait for inflight requests to finish
         before performing the sleep/wakeup actions.
         """
-        logger.debug(f"Switching from {self._active_model} to {target_model}")
+        logger.info(f"Switching from {self._active_model} to {target_model}")
         async with self._switch_lock:
             if target_model == self._active_model:
                 return
@@ -129,7 +140,7 @@ class ModelScheduler:
             # Sleep current active if exists
             if self._active_model is not None:
                 tmp_base_url = self._model_base_url(self._active_model)
-                clean_base_url = self.strip_path(tmp_base_url)
+                clean_base_url = self._strip_path(tmp_base_url)
                 try:
                     await self._action_server(
                         base_url=clean_base_url,
@@ -139,26 +150,18 @@ class ModelScheduler:
                     # propagate or just log; we choose to raise so caller sees failure
                     raise RuntimeError(f"Failed to sleep model {self._active_model}: {e}") from e
                 self._active_model = None
-
+                
             # Wake target if not None
             if target_model is not None:
-                # Check if the target_model is already awake
-                # This is the case when creating the scheduler 
-                # for the first time, but not all instance 
-                # were initially sleeping
                 tmp_base_url = self._model_base_url(target_model)
-                clean_base_url = self.strip_path(tmp_base_url)
-                is_sleeping = await self._is_server_sleeping(clean_base_url)
-
-                if is_sleeping:
-                    try:
-                        await self._action_server(
-                            base_url=clean_base_url,
-                            action="wakeup"
-                        )
-                    except Exception as e:
-                        raise RuntimeError(f"Failed to wake model {target_model}: {e}") from e
-
+                clean_base_url = self._strip_path(tmp_base_url)
+                try:
+                    await self._action_server(
+                        base_url=clean_base_url,
+                        action="wakeup",
+                    )
+                except Exception as e:
+                    raise RuntimeError(f"Failed to wake model {target_model}: {e}") from e
                 self._active_model = target_model
 
     async def _worker_loop(self):
@@ -175,7 +178,7 @@ class ModelScheduler:
         try:
             while True:
                 model_name, coro_factory, fut = await self._queue.get()
-                logger.debug("New item for worker loop has arrived")
+                logger.info("New item for worker loop has arrived")
 
                 # If scheduler is closing, fail requests
                 if self._closed:
@@ -189,7 +192,7 @@ class ModelScheduler:
                     if self._active_model != model_name:
                         await self._switch_to_model(model_name)
 
-                    logger.debug(f"Model {model_name} is awake now!")
+                    logger.info(f"Model {model_name} is awake now!")
 
                     # Prepare the awaitable from coro_factory.
                     awaitable = coro_factory()
@@ -226,7 +229,7 @@ class ModelScheduler:
 
                     # We dispatched the request — mark the queue item as done (we consider dispatch complete)
                     self._queue.task_done()
-                    logger.debug("Task dispatched.")
+                    logger.info("Task dispatched.")
 
                 except Exception as e:
                     if not fut.done():
@@ -243,7 +246,7 @@ class ModelScheduler:
 
     async def close(self):
         """Close the scheduler: stop accepting new, wait for remaining work, sleep active model and stop worker."""
-        logger.debug("Closing the scheduler")
+        logger.info("Closing the scheduler")
         self._closed = True
 
         # Wait for queue to be processed (all items dispatched) then wait for inflight tasks to finish.
@@ -290,7 +293,7 @@ class ModelScheduler:
     async def _wakeup(self, base_url: str):
         """Execute wake-up behavior based on sleep level."""
         
-        logger.debug(f"Executing wakeup for level {self.sleep_level}")
+        logger.info(f"Executing wakeup for level {self.sleep_level}")
         
         # Wake up
         await self._post(f"{base_url}/wake_up")
@@ -304,7 +307,7 @@ class ModelScheduler:
     async def _sleep(self, base_url: str):
         """Execute sleep behavior based on sleep level."""
         
-        logger.debug(f"Executing sleep level {self.sleep_level}")
+        logger.info(f"Executing sleep level {self.sleep_level}")
         await self._post(f"{base_url}/sleep?level={self.sleep_level}")
 
     async def _is_server_sleeping(self, url: str):
@@ -324,7 +327,7 @@ class ModelScheduler:
         else:
             raise ValueError(f"Unsupported action: {action}")
 
-        logger.debug(f"action {action} is sent to {base_url}. Waiting for it to complete!")
+        logger.info(f"action {action} is sent to {base_url}. Waiting for it to complete!")
         # Wait until action is complete
         start_time = time.time()
         while True:
@@ -334,12 +337,12 @@ class ModelScheduler:
                     is_sleeping = data.get("is_sleeping", False)
                     if action == "sleep" and is_sleeping:
                         end_time = time.time()
-                        logger.debug(f"Server is sleeping after {end_time - start:.3f} seconds.")
+                        logger.info(f"Server is sleeping after {end_time - start:.3f} seconds.")
                         break
 
                     if action == "wakeup" and not is_sleeping:
                         end_time = time.time()
-                        logger.debug(f"Server is wakeup after {end_time - start:.3f} seconds.")
+                        logger.info(f"Server is wakeup after {end_time - start:.3f} seconds.")
                         break
 
             elapsed = time.time() - start_time

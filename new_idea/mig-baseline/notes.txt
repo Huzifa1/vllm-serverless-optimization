@@ -1,0 +1,11 @@
+Baseline:
+- 5 reqs: 55s
+- 100 reqs: 1212s
+
+Sleep Only: 
+- 5 reqs: 8.85s
+- 100 reqs: 168.32s
+
+MIG Only:
+- 5 reqs: 
+- 100 reqs: 

@@ -6,7 +6,7 @@ import os
 from transformers import AutoConfig
 
 
-MODELS_DIR = "/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models"
+MODELS_DIR = "/local/huzaifa/workspace/models"
 
 model_max_lengths = {
     "llama3-3b": 0,

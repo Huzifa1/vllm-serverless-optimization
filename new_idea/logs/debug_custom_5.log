@@ -1,61 +1,61 @@
-INFO 12-08 14:48:28 [__init__.py:216] Automatically detected platform cuda.
-Namespace(subparser='bench', bench_type='serve', dispatch_function=<function BenchmarkServingSubcommand.cmd at 0x7fb2ac6b6d40>, seed=0, num_prompts=5, dataset_name='custom', no_stream=False, dataset_path='/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/new_idea/traces/modified_conversation_trace_5.jsonl', no_oversample=False, custom_output_len=256, custom_skip_chat_template=True, spec_bench_output_len=256, spec_bench_category=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, blazedit_min_distance=0.0, blazedit_max_distance=1.0, random_input_len=1024, random_output_len=128, random_range_ratio=0.0, random_prefix_len=0, random_batch_size=1, random_mm_base_items_per_request=1, random_mm_num_mm_items_range_ratio=0.0, random_mm_limit_mm_per_prompt={'image': 255, 'video': 0}, random_mm_bucket_config={(256, 256, 1): 0.5, (720, 1280, 1): 0.5, (720, 1280, 16): 0.0}, hf_subset=None, hf_split=None, hf_name=None, hf_output_len=None, prefix_repetition_prefix_len=256, prefix_repetition_suffix_len=256, prefix_repetition_num_prefixes=10, prefix_repetition_output_len=128, label=None, backend='vllm', endpoint_type=None, base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', header=None, max_concurrency=None, model=None, tokenizer=None, use_beam_search=False, logprobs=None, request_rate=inf, burstiness=1.0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, append_result=False, metadata=None, result_dir=None, result_filename='/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/new_idea/logs/bench_results_llama3-3b_5.json', ignore_eos=False, percentile_metrics='ttft,tpot,itl', metric_percentiles='95,99', goodput=None, request_id_prefix='benchmark-serving', top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, ramp_up_strategy=None, ramp_up_start_rps=None, ramp_up_end_rps=None, ready_check_timeout_sec=600, use_timestamp=True, custom_scheduler=True, model_to_port_map_file='/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/new_idea/model_to_port_map.json', sleep_level=2, check_every=0.1, wakeup_timeout=10)
+INFO 12-11 15:46:04 [__init__.py:216] Automatically detected platform cuda.
+Namespace(subparser='bench', bench_type='serve', dispatch_function=<function BenchmarkServingSubcommand.cmd at 0x7fb67c34b100>, seed=0, num_prompts=5, dataset_name='custom', no_stream=False, dataset_path='/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/new_idea/traces/modified_conversation_trace_5.jsonl', no_oversample=False, custom_output_len=256, custom_skip_chat_template=True, spec_bench_output_len=256, spec_bench_category=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, blazedit_min_distance=0.0, blazedit_max_distance=1.0, random_input_len=1024, random_output_len=128, random_range_ratio=0.0, random_prefix_len=0, random_batch_size=1, random_mm_base_items_per_request=1, random_mm_num_mm_items_range_ratio=0.0, random_mm_limit_mm_per_prompt={'image': 255, 'video': 0}, random_mm_bucket_config={(256, 256, 1): 0.5, (720, 1280, 1): 0.5, (720, 1280, 16): 0.0}, hf_subset=None, hf_split=None, hf_name=None, hf_output_len=None, prefix_repetition_prefix_len=256, prefix_repetition_suffix_len=256, prefix_repetition_num_prefixes=10, prefix_repetition_output_len=128, label=None, backend='vllm', endpoint_type=None, base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', header=None, max_concurrency=None, model=None, tokenizer=None, use_beam_search=False, logprobs=None, request_rate=inf, burstiness=1.0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, append_result=False, metadata=None, result_dir=None, result_filename='/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/new_idea/logs/bench_results_llama3-3b_5.json', ignore_eos=False, percentile_metrics='ttft,tpot,itl', metric_percentiles='95,99', goodput=None, request_id_prefix='benchmark-serving', top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, ramp_up_strategy=None, ramp_up_start_rps=None, ramp_up_end_rps=None, ready_check_timeout_sec=600, use_timestamp=True, custom_scheduler=True, model_to_port_map_file='/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/new_idea/model_to_port_map.json', sleep_level=2, check_every=0.1, wakeup_timeout=10)
 Starting initial single prompt test run...
 Skipping endpoint ready check.
 Traffic request rate: inf
 Burstiness factor: 1.0 (Poisson process)
 Maximum request concurrency: None
-Creating ModelScheduler with baseurl http://127.0.0.1:8000/v1/completions
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-New item for worker loop has arrived
-Switching from None to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 0.877 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.053 seconds.
-Executing wakeup for level 2
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.075 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.056 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.039 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.053 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.707 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-Closing the scheduler
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to None
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.047 seconds.
+INFO 12-11 15:46:07 [custom_scheduler.py:43] Creating ModelScheduler with baseurl http://127.0.0.1:8000/v1/completions
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 15:46:07 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 15:46:07 [custom_scheduler.py:151] Switching from None to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 15:46:07 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 15:46:08 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 15:46:08 [custom_scheduler.py:425] Server is wakeup after 0.870 seconds.
+INFO 12-11 15:46:08 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 15:46:08 [custom_scheduler.py:312] Task dispatched.
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 15:46:08 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 15:46:08 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 15:46:10 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 15:46:10 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 15:46:10 [custom_scheduler.py:420] Server is sleeping after 0.053 seconds.
+INFO 12-11 15:46:10 [custom_scheduler.py:376] Executing wakeup for level 2
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 15:46:11 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 15:46:11 [custom_scheduler.py:425] Server is wakeup after 1.076 seconds.
+INFO 12-11 15:46:11 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 15:46:11 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 15:46:11 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 15:46:11 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 15:46:11 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 15:46:11 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 15:46:11 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 15:46:15 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 15:46:15 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 15:46:15 [custom_scheduler.py:420] Server is sleeping after 0.058 seconds.
+INFO 12-11 15:46:15 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 15:46:16 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 15:46:16 [custom_scheduler.py:425] Server is wakeup after 1.043 seconds.
+INFO 12-11 15:46:16 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 15:46:16 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 15:46:16 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 15:46:16 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 15:46:17 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 15:46:17 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 15:46:17 [custom_scheduler.py:420] Server is sleeping after 0.053 seconds.
+INFO 12-11 15:46:17 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 15:46:18 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 15:46:18 [custom_scheduler.py:425] Server is wakeup after 0.721 seconds.
+INFO 12-11 15:46:18 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 15:46:18 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 15:46:18 [custom_scheduler.py:329] Closing the scheduler
+INFO 12-11 15:46:18 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to None
+INFO 12-11 15:46:18 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 15:46:18 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 15:46:18 [custom_scheduler.py:420] Server is sleeping after 0.047 seconds.
 
                              Output tokens per second
   500 +---------------------------------------------------------------------+
@@ -82,49 +82,87 @@ Server is sleeping after 0.047 seconds.
 
                           Concurrent requests per second
     2 +---------------------------------------------------------------------+
-      |                    *              *                                 |
-      |                   *                *                                |
-      |                   *                *                                |
-      |                   *                 *                               |
-  1.5 |                  *                   *                              |
-      |                  *                    *                             |
-      |                 *                     *                             |
-      |                 *                      *                            |
-    1 |*******          *                       **********************      |
-      |       *        *                                              *     |
-      |       *        *                                              *     |
-      |        *       *                                               *    |
-      |         *     *                                                 *   |
-  0.5 |          *    *                                                  *  |
-      |          *   *                                                   *  |
-      |           *  *                                                    * |
-      |            * *                                                     *|
-      |            **                                                      *|
+      |                   *               *                                 |
+      |                  *                 *                                |
+      |                  *                 *                                |
+      |                 *                   *                               |
+  1.5 |                *                     *                              |
+      |               *                       *                             |
+      |               *                       *                             |
+      |              *                         *                            |
+    1 |**************                           **********************      |
+      |                                                               *     |
+      |                                                               *     |
+      |                                                                *    |
+      |                                                                 *   |
+  0.5 |                                                                  *  |
+      |                                                                  *  |
+      |                                                                   * |
+      |                                                                    *|
+      |                                                                    *|
     0 +---------------------------------------------------------------------+
       0             2             4             6             8             10
 ============ Serving Benchmark Result ============
 Successful requests:                     5         
-Benchmark duration (s):                  10.58     
+Benchmark duration (s):                  10.59     
 Total input tokens:                      30373     
 Total generated tokens:                  2103      
 Request throughput (req/s):              0.47      
-Output token throughput (tok/s):         198.81    
+Output token throughput (tok/s):         198.52    
 Peak output token throughput (tok/s):    500.00    
 Peak concurrent requests:                2.00      
-Total Token throughput (tok/s):          3070.16   
+Total Token throughput (tok/s):          3065.72   
 ---------------Time to First Token----------------
-Mean TTFT (ms):                          142.90    
-Median TTFT (ms):                        124.26    
-P95 TTFT (ms):                           267.38    
-P99 TTFT (ms):                           285.65    
+Mean TTFT (ms):                          143.59    
+Median TTFT (ms):                        132.60    
+P95 TTFT (ms):                           262.81    
+P99 TTFT (ms):                           280.84    
 -----Time per Output Token (excl. 1st token)------
-Mean TPOT (ms):                          3.52      
-Median TPOT (ms):                        3.74      
+Mean TPOT (ms):                          3.61      
+Median TPOT (ms):                        3.75      
 P95 TPOT (ms):                           4.15      
 P99 TPOT (ms):                           4.20      
 ---------------Inter-token Latency----------------
 Mean ITL (ms):                           3.90      
-Median ITL (ms):                         3.80      
+Median ITL (ms):                         3.81      
 P95 ITL (ms):                            4.11      
-P99 ITL (ms):                            4.34      
+P99 ITL (ms):                            4.32      
+==================================================
+========== Scheduler Timing Statistics ===========
+Total samples:                          5         
+Needed switches:                        4 (80.00%)
+----------------- Queue Time (s) -----------------
+Mean Queue Time (s):                    3.56      
+Median Queue Time (s):                  3.01      
+P95 Queue Time (s):                     6.26      
+P99 Queue Time (s):                     6.42      
+Max Queue Time (s):                     6.46      
+Requests without Queue Time (s):        0 (0.00%) 
+---------------- Wakeup Time (s) -----------------
+Mean Wakeup Time (s):                   0.93      
+Median Wakeup Time (s):                 0.96      
+P95 Wakeup Time (s):                    1.07      
+P99 Wakeup Time (s):                    1.08      
+Max Wakeup Time (s):                    1.08      
+Requests without Wakeup Time (s):       1 (20.00%)
+---------------- Sleep Time (ms) -----------------
+Mean Sleep Time (ms):                   54.92     
+Median Sleep Time (ms):                 53.34     
+P95 Sleep Time (ms):                    57.61     
+P99 Sleep Time (ms):                    57.99     
+Max Sleep Time (ms):                    58.08     
+Requests without Sleep Time (ms):       2 (40.00%)
+--------------- Inflight Time (s) ----------------
+Mean Inflight Time (s):                 2.15      
+Median Inflight Time (s):               1.88      
+P95 Inflight Time (s):                  3.22      
+P99 Inflight Time (s):                  3.34      
+Max Inflight Time (s):                  3.37      
+Requests without Inflight Time (s):     2 (40.00%)
+------------------ Queue Length ------------------
+Mean Queue Length:                      1.60      
+Median Queue Length:                    1.00      
+P95 Queue Length:                       2.80      
+P99 Queue Length:                       2.96      
+Max Queue Length:                       3.00      
 ==================================================

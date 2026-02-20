@@ -1,5 +1,7 @@
 # Custom
 .vllm
+.venv
+ShareGPT*.json
 models
 
 # Byte-compiled / optimized / DLL files

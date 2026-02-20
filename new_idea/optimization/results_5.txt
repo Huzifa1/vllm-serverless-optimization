@@ -1,0 +1,91 @@
+Set parameter Username
+Set parameter LicenseID to value 2752871
+Academic license - for non-commercial use only - expires 2026-12-11
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 150
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: AMD EPYC 9354 32-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  150
+
+Optimize a model with 163 rows, 51 columns and 459 nonzeros (Min)
+Model fingerprint: 0x93a29446
+Model has 1 linear objective coefficients
+Variable types: 11 continuous, 40 integer (40 binary)
+Coefficient statistics:
+  Matrix range     [8e-02, 1e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+03]
+Presolve removed 41 rows and 2 columns
+Presolve time: 0.00s
+Presolved: 122 rows, 49 columns, 370 nonzeros
+Variable types: 9 continuous, 40 integer (39 binary)
+Found heuristic solution: objective 10.3623995
+Found heuristic solution: objective 10.3543995
+
+Root relaxation: objective 1.582504e+00, 56 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    1.58250    0   39   10.35440    1.58250  84.7%     -    0s
+H    0     0                       9.3323995    5.36809  42.5%     -    0s
+     0     0    5.36809    0   20    9.33240    5.36809  42.5%     -    0s
+     0     0    5.36809    0   15    9.33240    5.36809  42.5%     -    0s
+H    0     0                       9.3263995    5.36809  42.4%     -    0s
+     0     0    5.36809    0   18    9.32640    5.36809  42.4%     -    0s
+     0     0    5.36809    0    6    9.32640    5.36809  42.4%     -    0s
+     0     0    5.36809    0    8    9.32640    5.36809  42.4%     -    0s
+     0     0    5.36809    0   13    9.32640    5.36809  42.4%     -    0s
+     0     0    5.36809    0   13    9.32640    5.36809  42.4%     -    0s
+     0     0    5.36809    0    2    9.32640    5.36809  42.4%     -    0s
+     0     0    5.36809    0    2    9.32640    5.36809  42.4%     -    0s
+     0     0    5.36809    0    2    9.32640    5.36809  42.4%     -    0s
+     0     0    5.36809    0    2    9.32640    5.36809  42.4%     -    0s
+     0     2    5.36809    0    2    9.32640    5.36809  42.4%     -    0s
+H   67    70                       9.3263995    5.36809  42.4%  10.0    0s
+
+Cutting planes:
+  Gomory: 5
+  Implied bound: 7
+  MIR: 26
+  Zero half: 2
+  RLT: 6
+  Relax-and-lift: 5
+  BQP: 1
+
+Explored 516 nodes (2504 simplex iterations) in 0.08 seconds (0.03 work units)
+Thread count was 32 (of 64 available processors)
+
+Solution count 5: 9.3264 9.3264 9.3324 ... 10.3624
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 9.326399536987e+00, best bound 9.326399536987e+00, gap 0.0000%
+
+=== Optimal schedule ===
+Models: ['/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b', '/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b', '/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b']
+Makespan (C_max): 9.3264
+
+Stage 0: model=/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b, start=0.7300, end=0.8870
+  jobs: []
+Stage 1: model=/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b, start=2.0000, end=5.3681
+  jobs: [1, 2]
+Stage 2: model=/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b, start=5.3681, end=5.3681
+  jobs: []
+Stage 3: model=/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b, start=6.1541, end=6.2376
+  jobs: [4]
+Stage 4: model=/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b, start=7.3206, end=9.3264
+  jobs: [0, 3]
+
+Job-level report (job_id, model, release, proc_time, sent_time, completion_time):
+  0, /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b, r=0.0000, p=2.0058, sent=7.3206, done=9.3264
+  1, /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b, r=1.0000, p=2.2345, sent=2.0000, done=4.2345
+  2, /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b, r=2.0000, p=3.3681, sent=2.0000, done=5.3681
+  3, /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b, r=3.0000, p=1.2098, sent=7.3206, done=8.5304
+  4, /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b, r=4.0000, p=0.0835, sent=6.1541, done=6.2376
+
+Wrote schedule to schedule_output.json

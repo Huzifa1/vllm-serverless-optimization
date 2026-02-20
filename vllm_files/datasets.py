@@ -1348,17 +1348,17 @@ def get_samples(args, tokenizers) -> list[SampleRequest]:
         args.request_id_prefix = ""
     
     # HUZI: Currently, only custom datasets are supported
-    if args.custom_scheduler and args.dataset_name != "custom":
+    if (args.custom_scheduler or args.use_mig) and args.dataset_name != "custom":
         raise ValueError(
-            "custom_scheduler flag is currently only supported"
+            "custom_scheduler and use_mig flags are currently only supported"
             "with custom datasets"
         )
     
-    # HUZI: If custom_scheduler is false, fallback to normal case
-    if not args.custom_scheduler:
+    # HUZI: If custom_scheduler and use_mig are false, fallback to normal case
+    if not args.custom_scheduler and not args.use_mig:
         # HUZI: In this case, there should be only one tokenizer
         assert len(tokenizers.keys()) == 1, (
-            "If custom_scheduler is false, there should be only 1 tokenizer")
+            "If custom_scheduler and use_mig are false, there should be only 1 tokenizer")
         
         tokenizer = list(tokenizers.values())[0]
         tokenizers = tokenizer
@@ -1373,6 +1373,7 @@ def get_samples(args, tokenizers) -> list[SampleRequest]:
             request_id_prefix=args.request_id_prefix,
             no_oversample=args.no_oversample,
             custom_scheduler=args.custom_scheduler,
+            use_mig=args.use_mig,
         )
 
     elif args.dataset_name == "sonnet":
@@ -1661,6 +1662,7 @@ class CustomDataset(BenchmarkDataset):
         request_id_prefix: str = "",
         no_oversample: bool = False,
         custom_scheduler: bool = False, # HUZI
+        use_mig: bool = False, # HUZI
         **kwargs,
     ) -> list:
         
@@ -1678,18 +1680,18 @@ class CustomDataset(BenchmarkDataset):
                 break
             prompt = item["prompt"]
             
-            # HUZI: if custom_scheduler, select correct tokenizer
+            # HUZI: if custom_scheduler or use_mig, select correct tokenizer
             # based on model_name
-            if custom_scheduler:
+            if custom_scheduler or use_mig:
                 if not isinstance(tokenizer, dict):
                     raise ValueError(
-                        "When custom_scheduler=True, tokenizer "
+                        "When custom_scheduler=True or use_mig=True, tokenizer "
                         "should be of type dict"
                     )
                 
                 if "model_name" not in item:
                     raise KeyError(
-                        "custom_scheduler=True but at least one "
+                        "custom_scheduler=True or use_mig=True but at least one "
                         "request is missing 'model_name'."
                     )
 

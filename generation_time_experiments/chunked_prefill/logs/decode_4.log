@@ -1,0 +1,65 @@
+Request 0 solo time: 0.544s
+Request 0: output words ≈ 57
+
+Request 1 solo time: 1.072s
+Request 1: output words ≈ 112
+
+Request 2 solo time: 2.152s
+Request 2: output words ≈ 224
+
+Request 3 solo time: 4.330s
+Request 3: output words ≈ 447
+
+Request 4 solo time: 8.787s
+Request 4: output words ≈ 891
+
+Request 5 solo time: 8.794s
+Request 5: output words ≈ 891
+
+Request 6 solo time: 8.797s
+Request 6: output words ≈ 891
+
+Request 7 solo time: 8.801s
+Request 7: output words ≈ 891
+
+Request 8 solo time: 8.803s
+Request 8: output words ≈ 891
+
+Total solo time: 52.092 seconds
+
+
+
+
+
+Total wall-clock time: 19.147s
+Request 0 solo time (async): 0.561s
+Request 0: output words ≈ 57
+
+Request 1 solo time (async): 1.113s
+Request 1: output words ≈ 112
+
+Request 2 solo time (async): 2.260s
+Request 2: output words ≈ 224
+
+Request 3 solo time (async): 5.288s
+Request 3: output words ≈ 447
+
+Request 4 solo time (async): 9.826s
+Request 4: output words ≈ 891
+
+Request 5 solo time (async): 11.120s
+Request 5: output words ≈ 891
+
+Request 6 solo time (async): 12.333s
+Request 6: output words ≈ 891
+
+Request 7 solo time (async): 15.221s
+Request 7: output words ≈ 891
+
+Request 8 solo time (async): 19.146s
+Request 8: output words ≈ 891
+
+
+
+
+

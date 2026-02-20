@@ -1,881 +1,998 @@
-INFO 12-08 14:40:44 [__init__.py:216] Automatically detected platform cuda.
-Namespace(subparser='bench', bench_type='serve', dispatch_function=<function BenchmarkServingSubcommand.cmd at 0x7fead0f1eb60>, seed=0, num_prompts=100, dataset_name='custom', no_stream=False, dataset_path='/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/new_idea/traces/modified_conversation_trace_100.jsonl', no_oversample=False, custom_output_len=256, custom_skip_chat_template=True, spec_bench_output_len=256, spec_bench_category=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, blazedit_min_distance=0.0, blazedit_max_distance=1.0, random_input_len=1024, random_output_len=128, random_range_ratio=0.0, random_prefix_len=0, random_batch_size=1, random_mm_base_items_per_request=1, random_mm_num_mm_items_range_ratio=0.0, random_mm_limit_mm_per_prompt={'image': 255, 'video': 0}, random_mm_bucket_config={(256, 256, 1): 0.5, (720, 1280, 1): 0.5, (720, 1280, 16): 0.0}, hf_subset=None, hf_split=None, hf_name=None, hf_output_len=None, prefix_repetition_prefix_len=256, prefix_repetition_suffix_len=256, prefix_repetition_num_prefixes=10, prefix_repetition_output_len=128, label=None, backend='vllm', endpoint_type=None, base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', header=None, max_concurrency=None, model=None, tokenizer=None, use_beam_search=False, logprobs=None, request_rate=inf, burstiness=1.0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, append_result=False, metadata=None, result_dir=None, result_filename='/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/new_idea/logs/bench_results_llama3-3b_100.json', ignore_eos=False, percentile_metrics='ttft,tpot,itl', metric_percentiles='95,99', goodput=None, request_id_prefix='benchmark-serving', top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, ramp_up_strategy=None, ramp_up_start_rps=None, ramp_up_end_rps=None, ready_check_timeout_sec=600, use_timestamp=True, custom_scheduler=True, models_dir=None, model_to_port_map_file='/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/new_idea/model_to_port_map.json', sleep_level=2)
+INFO 12-11 12:00:30 [__init__.py:216] Automatically detected platform cuda.
+Namespace(subparser='bench', bench_type='serve', dispatch_function=<function BenchmarkServingSubcommand.cmd at 0x7f824fc43060>, seed=0, num_prompts=100, dataset_name='custom', no_stream=False, dataset_path='/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/new_idea/traces/modified_conversation_trace_100.jsonl', no_oversample=False, custom_output_len=256, custom_skip_chat_template=True, spec_bench_output_len=256, spec_bench_category=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, blazedit_min_distance=0.0, blazedit_max_distance=1.0, random_input_len=1024, random_output_len=128, random_range_ratio=0.0, random_prefix_len=0, random_batch_size=1, random_mm_base_items_per_request=1, random_mm_num_mm_items_range_ratio=0.0, random_mm_limit_mm_per_prompt={'image': 255, 'video': 0}, random_mm_bucket_config={(256, 256, 1): 0.5, (720, 1280, 1): 0.5, (720, 1280, 16): 0.0}, hf_subset=None, hf_split=None, hf_name=None, hf_output_len=None, prefix_repetition_prefix_len=256, prefix_repetition_suffix_len=256, prefix_repetition_num_prefixes=10, prefix_repetition_output_len=128, label=None, backend='vllm', endpoint_type=None, base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', header=None, max_concurrency=None, model=None, tokenizer=None, use_beam_search=False, logprobs=None, request_rate=inf, burstiness=1.0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, append_result=False, metadata=None, result_dir=None, result_filename='/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/new_idea/logs/bench_results_llama3-3b_100.json', ignore_eos=False, percentile_metrics='ttft,tpot,itl', metric_percentiles='95,99', goodput=None, request_id_prefix='benchmark-serving', top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, ramp_up_strategy=None, ramp_up_start_rps=None, ramp_up_end_rps=None, ready_check_timeout_sec=600, use_timestamp=True, custom_scheduler=True, model_to_port_map_file='/local/huzaifa/workspace/vLLM/vllm-serverless-optimization/new_idea/model_to_port_map.json', sleep_level=2, check_every=0.1, wakeup_timeout=10)
 Starting initial single prompt test run...
 Skipping endpoint ready check.
 Traffic request rate: inf
 Burstiness factor: 1.0 (Poisson process)
 Maximum request concurrency: None
-Creating ModelScheduler with baseurl http://127.0.0.1:8000/v1/completions
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-New item for worker loop has arrived
-Switching from None to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 0.870 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.053 seconds.
-Executing wakeup for level 2
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.070 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.056 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.730 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.048 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.029 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.054 seconds.
-Executing wakeup for level 2
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.066 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.056 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.043 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.054 seconds.
-Executing wakeup for level 2
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.062 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.056 seconds.
-Executing wakeup for level 2
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.036 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.055 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.077 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.057 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.727 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.048 seconds.
-Executing wakeup for level 2
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Received request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.039 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.055 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.069 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.058 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.041 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.055 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.065 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.058 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.033 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.055 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.718 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.047 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.032 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.055 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.722 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.048 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.069 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.057 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.723 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.047 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.078 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.055 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.031 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.054 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.070 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.055 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.721 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.048 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.070 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.057 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.719 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.048 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.067 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.057 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.713 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.048 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.066 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.056 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.725 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.049 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.068 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.056 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.050 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.053 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.720 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.047 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.034 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.054 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.719 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.048 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.070 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.056 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.034 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.054 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.720 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.048 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.032 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.055 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.713 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.049 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.029 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.054 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.072 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.056 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.042 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.054 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.067 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.055 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.710 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.048 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.061 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.055 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.046 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.051 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.067 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.056 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.725 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.047 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.041 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.053 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.706 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.050 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.044 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.053 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.083 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.055 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is wakeup after 1.042 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
-Server is sleeping after 0.054 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.719 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.046 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is wakeup after 1.076 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake now!
-Task dispatched.
-New item for worker loop has arrived
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
-Server is sleeping after 0.058 seconds.
-Executing wakeup for level 2
-action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is wakeup after 0.714 seconds.
-Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake now!
-Task dispatched.
-Closing the scheduler
-Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to None
-Executing sleep level 2
-action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
-Server is sleeping after 0.048 seconds.
+INFO 12-11 12:00:35 [custom_scheduler.py:43] Creating ModelScheduler with baseurl http://127.0.0.1:8000/v1/completions
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:00:35 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:00:35 [custom_scheduler.py:151] Switching from None to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:00:35 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:00:35 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:00:35 [custom_scheduler.py:425] Server is wakeup after 0.877 seconds.
+INFO 12-11 12:00:35 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:00:35 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:00:35 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:00:35 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:00:37 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:00:37 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:00:37 [custom_scheduler.py:420] Server is sleeping after 0.054 seconds.
+INFO 12-11 12:00:37 [custom_scheduler.py:376] Executing wakeup for level 2
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:00:38 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:00:38 [custom_scheduler.py:425] Server is wakeup after 1.084 seconds.
+INFO 12-11 12:00:38 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:00:38 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:00:38 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:00:38 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:00:38 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:00:38 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:00:38 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:00:38 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:00:38 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:00:38 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:00:38 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:00:38 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:00:38 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:00:44 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:00:44 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:00:44 [custom_scheduler.py:420] Server is sleeping after 0.059 seconds.
+INFO 12-11 12:00:44 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:00:45 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:00:45 [custom_scheduler.py:425] Server is wakeup after 0.713 seconds.
+INFO 12-11 12:00:45 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:00:45 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:00:45 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:00:45 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:00:45 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:00:45 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:00:45 [custom_scheduler.py:420] Server is sleeping after 0.048 seconds.
+INFO 12-11 12:00:45 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:00:46 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:00:46 [custom_scheduler.py:425] Server is wakeup after 1.033 seconds.
+INFO 12-11 12:00:46 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:00:46 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:00:46 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:00:46 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:00:46 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:00:46 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:00:46 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:00:48 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:00:48 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:00:48 [custom_scheduler.py:420] Server is sleeping after 0.055 seconds.
+INFO 12-11 12:00:48 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:00:49 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:00:49 [custom_scheduler.py:425] Server is wakeup after 1.068 seconds.
+INFO 12-11 12:00:49 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:00:49 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:00:49 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:00:49 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:00:49 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:00:49 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:00:49 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:00:53 [custom_scheduler.py:390] Executing sleep level 2
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:00:53 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:00:53 [custom_scheduler.py:420] Server is sleeping after 0.058 seconds.
+INFO 12-11 12:00:53 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:00:54 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:00:54 [custom_scheduler.py:425] Server is wakeup after 1.050 seconds.
+INFO 12-11 12:00:54 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:00:54 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:00:54 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:00:54 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:00:54 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:00:54 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:00:54 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:00:54 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:00:54 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:00:54 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:00:56 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:00:56 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:00:56 [custom_scheduler.py:420] Server is sleeping after 0.055 seconds.
+INFO 12-11 12:00:56 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:00:57 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:00:57 [custom_scheduler.py:425] Server is wakeup after 1.068 seconds.
+INFO 12-11 12:00:57 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:00:57 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:00:57 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:00:57 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:00:57 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:00:57 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:00:57 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:00:57 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:00:57 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:00:57 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:01:03 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:03 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:01:03 [custom_scheduler.py:420] Server is sleeping after 0.058 seconds.
+INFO 12-11 12:01:03 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:04 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:01:04 [custom_scheduler.py:425] Server is wakeup after 1.042 seconds.
+INFO 12-11 12:01:04 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:01:04 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:04 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:04 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:01:05 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:05 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:01:05 [custom_scheduler.py:420] Server is sleeping after 0.054 seconds.
+INFO 12-11 12:01:05 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:06 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:01:06 [custom_scheduler.py:425] Server is wakeup after 1.072 seconds.
+INFO 12-11 12:01:06 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:01:06 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:06 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:06 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:01:09 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:09 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:01:09 [custom_scheduler.py:420] Server is sleeping after 0.057 seconds.
+INFO 12-11 12:01:09 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:10 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:01:10 [custom_scheduler.py:425] Server is wakeup after 0.719 seconds.
+INFO 12-11 12:01:10 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:01:10 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:10 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:10 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+Sending request for model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:01:11 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:11 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:01:11 [custom_scheduler.py:420] Server is sleeping after 0.049 seconds.
+INFO 12-11 12:01:11 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:12 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:01:12 [custom_scheduler.py:425] Server is wakeup after 1.047 seconds.
+INFO 12-11 12:01:12 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:01:12 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:12 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:12 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:01:14 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:14 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:01:14 [custom_scheduler.py:420] Server is sleeping after 0.054 seconds.
+INFO 12-11 12:01:14 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:15 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:01:15 [custom_scheduler.py:425] Server is wakeup after 1.070 seconds.
+INFO 12-11 12:01:15 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:01:15 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:15 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:15 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:01:16 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:16 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:01:16 [custom_scheduler.py:420] Server is sleeping after 0.056 seconds.
+INFO 12-11 12:01:16 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:17 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:01:17 [custom_scheduler.py:425] Server is wakeup after 1.048 seconds.
+INFO 12-11 12:01:17 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:01:17 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:17 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:17 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:01:19 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:19 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:01:19 [custom_scheduler.py:420] Server is sleeping after 0.054 seconds.
+INFO 12-11 12:01:19 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:20 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:01:20 [custom_scheduler.py:425] Server is wakeup after 1.070 seconds.
+INFO 12-11 12:01:20 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:01:20 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:20 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:20 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:01:20 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:20 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:20 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:01:20 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:20 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:20 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:01:25 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:25 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:01:25 [custom_scheduler.py:420] Server is sleeping after 0.057 seconds.
+INFO 12-11 12:01:25 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:26 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:01:26 [custom_scheduler.py:425] Server is wakeup after 1.037 seconds.
+INFO 12-11 12:01:26 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:01:26 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:26 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:26 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:01:26 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:26 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:26 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:01:26 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:26 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:26 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:01:29 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:29 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:01:29 [custom_scheduler.py:420] Server is sleeping after 0.054 seconds.
+INFO 12-11 12:01:29 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:30 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:01:30 [custom_scheduler.py:425] Server is wakeup after 1.068 seconds.
+INFO 12-11 12:01:30 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:01:30 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:30 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:30 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:01:32 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:32 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:01:32 [custom_scheduler.py:420] Server is sleeping after 0.057 seconds.
+INFO 12-11 12:01:32 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:33 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:01:33 [custom_scheduler.py:425] Server is wakeup after 0.722 seconds.
+INFO 12-11 12:01:33 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:01:33 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:33 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:33 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:01:34 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:34 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:01:34 [custom_scheduler.py:420] Server is sleeping after 0.049 seconds.
+INFO 12-11 12:01:34 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:36 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:01:36 [custom_scheduler.py:425] Server is wakeup after 1.041 seconds.
+INFO 12-11 12:01:36 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:01:36 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:36 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:36 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:01:38 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:38 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:01:38 [custom_scheduler.py:420] Server is sleeping after 0.054 seconds.
+INFO 12-11 12:01:38 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:39 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:01:39 [custom_scheduler.py:425] Server is wakeup after 1.066 seconds.
+INFO 12-11 12:01:39 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:01:39 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:39 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:39 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:01:41 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:41 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:01:41 [custom_scheduler.py:420] Server is sleeping after 0.057 seconds.
+INFO 12-11 12:01:41 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:42 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:01:42 [custom_scheduler.py:425] Server is wakeup after 0.721 seconds.
+INFO 12-11 12:01:42 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:01:42 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:42 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:42 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:01:43 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:43 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:01:43 [custom_scheduler.py:420] Server is sleeping after 0.047 seconds.
+INFO 12-11 12:01:43 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:44 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:01:44 [custom_scheduler.py:425] Server is wakeup after 1.072 seconds.
+INFO 12-11 12:01:44 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:01:44 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:44 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:44 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:01:44 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:44 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:01:44 [custom_scheduler.py:420] Server is sleeping after 0.057 seconds.
+INFO 12-11 12:01:44 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:45 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:01:45 [custom_scheduler.py:425] Server is wakeup after 1.047 seconds.
+INFO 12-11 12:01:45 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:01:45 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:45 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:45 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:01:45 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:45 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:45 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:01:46 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:46 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:01:46 [custom_scheduler.py:420] Server is sleeping after 0.054 seconds.
+INFO 12-11 12:01:46 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:47 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:01:47 [custom_scheduler.py:425] Server is wakeup after 0.721 seconds.
+INFO 12-11 12:01:47 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:01:47 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:47 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:47 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:01:49 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:49 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:01:49 [custom_scheduler.py:420] Server is sleeping after 0.049 seconds.
+INFO 12-11 12:01:49 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:50 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:01:50 [custom_scheduler.py:425] Server is wakeup after 1.072 seconds.
+INFO 12-11 12:01:50 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:01:50 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:50 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:50 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:01:51 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:51 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:01:51 [custom_scheduler.py:420] Server is sleeping after 0.057 seconds.
+INFO 12-11 12:01:51 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:52 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:01:52 [custom_scheduler.py:425] Server is wakeup after 0.715 seconds.
+INFO 12-11 12:01:52 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:01:52 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:52 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:52 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:01:53 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:53 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:01:53 [custom_scheduler.py:420] Server is sleeping after 0.047 seconds.
+INFO 12-11 12:01:53 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:54 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:01:54 [custom_scheduler.py:425] Server is wakeup after 1.071 seconds.
+INFO 12-11 12:01:54 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:01:54 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:54 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:54 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:01:54 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:54 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:54 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:01:54 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:54 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:54 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:01:56 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:01:56 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:01:56 [custom_scheduler.py:420] Server is sleeping after 0.058 seconds.
+INFO 12-11 12:01:56 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:01:57 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:01:57 [custom_scheduler.py:425] Server is wakeup after 0.718 seconds.
+INFO 12-11 12:01:57 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:01:57 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:57 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:57 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:01:57 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:57 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:57 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:01:57 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:57 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:57 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:01:57 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:01:57 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:01:57 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:02:00 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:00 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:02:00 [custom_scheduler.py:420] Server is sleeping after 0.049 seconds.
+INFO 12-11 12:02:00 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:01 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:02:01 [custom_scheduler.py:425] Server is wakeup after 1.072 seconds.
+INFO 12-11 12:02:01 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:02:01 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:01 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:01 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:02:01 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:01 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:02:01 [custom_scheduler.py:420] Server is sleeping after 0.058 seconds.
+INFO 12-11 12:02:01 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:02 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:02:02 [custom_scheduler.py:425] Server is wakeup after 0.723 seconds.
+INFO 12-11 12:02:02 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:02:02 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:02 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:02 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:02:02 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:02 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:02 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:02:04 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:04 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:02:04 [custom_scheduler.py:420] Server is sleeping after 0.048 seconds.
+INFO 12-11 12:02:04 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:05 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:02:05 [custom_scheduler.py:425] Server is wakeup after 1.041 seconds.
+INFO 12-11 12:02:05 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:02:05 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:05 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:05 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:02:06 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:06 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:02:07 [custom_scheduler.py:420] Server is sleeping after 0.054 seconds.
+INFO 12-11 12:02:07 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:08 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:02:08 [custom_scheduler.py:425] Server is wakeup after 1.073 seconds.
+INFO 12-11 12:02:08 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:02:08 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:08 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:08 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:02:08 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:08 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:08 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:02:09 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:09 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:02:09 [custom_scheduler.py:420] Server is sleeping after 0.059 seconds.
+INFO 12-11 12:02:09 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:10 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:02:10 [custom_scheduler.py:425] Server is wakeup after 0.721 seconds.
+INFO 12-11 12:02:10 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:02:10 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:10 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:10 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:02:12 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:12 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:02:12 [custom_scheduler.py:420] Server is sleeping after 0.048 seconds.
+INFO 12-11 12:02:12 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:13 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:02:13 [custom_scheduler.py:425] Server is wakeup after 1.073 seconds.
+INFO 12-11 12:02:13 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:02:13 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:13 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:13 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:02:14 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:14 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:02:14 [custom_scheduler.py:420] Server is sleeping after 0.057 seconds.
+INFO 12-11 12:02:14 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:15 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:02:15 [custom_scheduler.py:425] Server is wakeup after 0.717 seconds.
+INFO 12-11 12:02:15 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:02:15 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:15 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:15 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:02:15 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:15 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:15 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:02:16 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:16 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:02:16 [custom_scheduler.py:420] Server is sleeping after 0.049 seconds.
+INFO 12-11 12:02:16 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:17 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:02:17 [custom_scheduler.py:425] Server is wakeup after 1.032 seconds.
+INFO 12-11 12:02:17 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:02:17 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:17 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:17 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:02:17 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:17 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:17 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:02:21 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:21 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:02:21 [custom_scheduler.py:420] Server is sleeping after 0.054 seconds.
+INFO 12-11 12:02:21 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:22 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:02:22 [custom_scheduler.py:425] Server is wakeup after 0.714 seconds.
+INFO 12-11 12:02:22 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:02:22 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:22 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:22 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:02:23 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:23 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:02:23 [custom_scheduler.py:420] Server is sleeping after 0.047 seconds.
+INFO 12-11 12:02:23 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:24 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:02:24 [custom_scheduler.py:425] Server is wakeup after 1.048 seconds.
+INFO 12-11 12:02:24 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:02:24 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:24 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:24 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:02:24 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:24 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:24 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:02:27 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:27 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:02:27 [custom_scheduler.py:420] Server is sleeping after 0.053 seconds.
+INFO 12-11 12:02:27 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:27 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:02:27 [custom_scheduler.py:425] Server is wakeup after 0.716 seconds.
+INFO 12-11 12:02:27 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:02:27 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:27 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:27 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:02:28 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:28 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:02:28 [custom_scheduler.py:420] Server is sleeping after 0.047 seconds.
+INFO 12-11 12:02:28 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:29 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:02:29 [custom_scheduler.py:425] Server is wakeup after 1.035 seconds.
+INFO 12-11 12:02:29 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:02:29 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:29 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:29 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:02:30 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:30 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:02:30 [custom_scheduler.py:420] Server is sleeping after 0.053 seconds.
+INFO 12-11 12:02:30 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:31 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:02:31 [custom_scheduler.py:425] Server is wakeup after 1.075 seconds.
+INFO 12-11 12:02:31 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:02:31 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:31 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:31 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:02:31 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:31 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:31 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:02:33 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:33 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:02:33 [custom_scheduler.py:420] Server is sleeping after 0.057 seconds.
+INFO 12-11 12:02:33 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:34 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:02:34 [custom_scheduler.py:425] Server is wakeup after 1.047 seconds.
+INFO 12-11 12:02:34 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:02:34 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:34 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:34 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:02:36 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:36 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:02:36 [custom_scheduler.py:420] Server is sleeping after 0.053 seconds.
+INFO 12-11 12:02:36 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:37 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:02:37 [custom_scheduler.py:425] Server is wakeup after 1.078 seconds.
+INFO 12-11 12:02:37 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:02:37 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:37 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:37 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:02:39 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:39 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:02:39 [custom_scheduler.py:420] Server is sleeping after 0.057 seconds.
+INFO 12-11 12:02:39 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:40 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:02:40 [custom_scheduler.py:425] Server is wakeup after 1.045 seconds.
+INFO 12-11 12:02:40 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:02:40 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:40 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:40 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:02:41 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:41 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:02:41 [custom_scheduler.py:420] Server is sleeping after 0.053 seconds.
+INFO 12-11 12:02:41 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:42 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:02:42 [custom_scheduler.py:425] Server is wakeup after 1.077 seconds.
+INFO 12-11 12:02:42 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:02:42 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:42 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:42 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:02:42 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:42 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:42 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:02:47 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:47 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:02:47 [custom_scheduler.py:420] Server is sleeping after 0.059 seconds.
+INFO 12-11 12:02:47 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:47 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:02:47 [custom_scheduler.py:425] Server is wakeup after 0.723 seconds.
+INFO 12-11 12:02:47 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:02:47 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:47 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:47 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:02:48 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:48 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:02:48 [custom_scheduler.py:420] Server is sleeping after 0.048 seconds.
+INFO 12-11 12:02:48 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:49 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:02:49 [custom_scheduler.py:425] Server is wakeup after 1.070 seconds.
+INFO 12-11 12:02:49 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:02:49 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:49 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:49 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:02:49 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:49 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:49 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:02:51 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:52 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:02:52 [custom_scheduler.py:420] Server is sleeping after 0.059 seconds.
+INFO 12-11 12:02:52 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:53 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:02:53 [custom_scheduler.py:425] Server is wakeup after 1.047 seconds.
+INFO 12-11 12:02:53 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:02:53 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:53 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:53 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:02:53 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:53 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:02:53 [custom_scheduler.py:420] Server is sleeping after 0.054 seconds.
+INFO 12-11 12:02:53 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:53 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:02:53 [custom_scheduler.py:425] Server is wakeup after 0.716 seconds.
+INFO 12-11 12:02:53 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:02:53 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:53 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:53 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:02:53 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:53 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:53 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:02:56 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:02:56 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:02:56 [custom_scheduler.py:420] Server is sleeping after 0.049 seconds.
+INFO 12-11 12:02:56 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:02:57 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:02:57 [custom_scheduler.py:425] Server is wakeup after 1.078 seconds.
+INFO 12-11 12:02:57 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:02:57 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:02:57 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:02:57 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:03:00 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:00 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:03:00 [custom_scheduler.py:420] Server is sleeping after 0.058 seconds.
+INFO 12-11 12:03:00 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:01 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:03:01 [custom_scheduler.py:425] Server is wakeup after 0.728 seconds.
+INFO 12-11 12:03:01 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:03:01 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:01 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:01 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:03:01 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:01 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:01 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:03:02 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:02 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:03:02 [custom_scheduler.py:420] Server is sleeping after 0.048 seconds.
+INFO 12-11 12:03:02 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:03 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:03:03 [custom_scheduler.py:425] Server is wakeup after 1.040 seconds.
+INFO 12-11 12:03:03 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:03:03 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:03 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:03 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:03:04 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:04 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:03:04 [custom_scheduler.py:420] Server is sleeping after 0.053 seconds.
+INFO 12-11 12:03:04 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:05 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:03:05 [custom_scheduler.py:425] Server is wakeup after 0.721 seconds.
+INFO 12-11 12:03:05 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:03:05 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:05 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:05 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:03:07 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:07 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:03:07 [custom_scheduler.py:420] Server is sleeping after 0.047 seconds.
+INFO 12-11 12:03:07 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:08 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:03:08 [custom_scheduler.py:425] Server is wakeup after 1.071 seconds.
+INFO 12-11 12:03:08 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:03:08 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:08 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:08 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:03:10 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:10 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:03:10 [custom_scheduler.py:420] Server is sleeping after 0.058 seconds.
+INFO 12-11 12:03:10 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:11 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:03:11 [custom_scheduler.py:425] Server is wakeup after 0.725 seconds.
+INFO 12-11 12:03:11 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:03:11 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:11 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:11 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:03:12 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:12 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:03:12 [custom_scheduler.py:420] Server is sleeping after 0.048 seconds.
+INFO 12-11 12:03:12 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:13 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:03:13 [custom_scheduler.py:425] Server is wakeup after 1.039 seconds.
+INFO 12-11 12:03:13 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:03:13 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:13 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:13 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:03:14 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:14 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:03:14 [custom_scheduler.py:420] Server is sleeping after 0.053 seconds.
+INFO 12-11 12:03:14 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:15 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:03:15 [custom_scheduler.py:425] Server is wakeup after 1.074 seconds.
+INFO 12-11 12:03:15 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:03:15 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:15 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:15 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:03:17 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:17 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:03:17 [custom_scheduler.py:420] Server is sleeping after 0.057 seconds.
+INFO 12-11 12:03:17 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:18 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:03:18 [custom_scheduler.py:425] Server is wakeup after 1.054 seconds.
+INFO 12-11 12:03:18 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:03:18 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:18 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:18 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:03:20 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:20 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:03:20 [custom_scheduler.py:420] Server is sleeping after 0.053 seconds.
+INFO 12-11 12:03:20 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:21 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:03:21 [custom_scheduler.py:425] Server is wakeup after 0.718 seconds.
+INFO 12-11 12:03:21 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:03:21 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:21 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:21 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:03:22 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:22 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:03:22 [custom_scheduler.py:420] Server is sleeping after 0.047 seconds.
+INFO 12-11 12:03:22 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:23 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:03:23 [custom_scheduler.py:425] Server is wakeup after 1.041 seconds.
+INFO 12-11 12:03:23 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:03:23 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:23 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:23 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:03:26 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:26 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:03:26 [custom_scheduler.py:420] Server is sleeping after 0.053 seconds.
+INFO 12-11 12:03:26 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:27 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:03:27 [custom_scheduler.py:425] Server is wakeup after 1.064 seconds.
+INFO 12-11 12:03:27 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:03:27 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:27 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:27 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:03:30 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:30 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:03:30 [custom_scheduler.py:420] Server is sleeping after 0.058 seconds.
+INFO 12-11 12:03:30 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:31 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:03:31 [custom_scheduler.py:425] Server is wakeup after 1.047 seconds.
+INFO 12-11 12:03:31 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:03:31 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:31 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:31 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:03:32 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:32 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:03:32 [custom_scheduler.py:420] Server is sleeping after 0.053 seconds.
+INFO 12-11 12:03:32 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:32 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:03:32 [custom_scheduler.py:425] Server is wakeup after 0.721 seconds.
+INFO 12-11 12:03:32 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:03:32 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:32 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:32 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:03:33 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:33 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:03:33 [custom_scheduler.py:420] Server is sleeping after 0.047 seconds.
+INFO 12-11 12:03:33 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:34 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:03:34 [custom_scheduler.py:425] Server is wakeup after 1.074 seconds.
+INFO 12-11 12:03:34 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:03:34 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:34 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:34 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:03:34 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:34 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:34 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:03:45 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:45 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:03:45 [custom_scheduler.py:420] Server is sleeping after 0.063 seconds.
+INFO 12-11 12:03:45 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:46 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:03:46 [custom_scheduler.py:425] Server is wakeup after 1.033 seconds.
+INFO 12-11 12:03:46 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:03:46 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:46 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:46 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:03:46 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:46 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:46 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:03:48 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:48 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:03:48 [custom_scheduler.py:420] Server is sleeping after 0.053 seconds.
+INFO 12-11 12:03:48 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:50 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:03:50 [custom_scheduler.py:425] Server is wakeup after 1.075 seconds.
+INFO 12-11 12:03:50 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:03:50 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:50 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:50 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b
+INFO 12-11 12:03:52 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:52 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:03:52 [custom_scheduler.py:420] Server is sleeping after 0.057 seconds.
+INFO 12-11 12:03:52 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:53 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:03:53 [custom_scheduler.py:425] Server is wakeup after 0.724 seconds.
+INFO 12-11 12:03:53 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b is awake
+INFO 12-11 12:03:53 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:53 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:53 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen-1.8b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b
+INFO 12-11 12:03:54 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:54 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8501. Waiting for it to complete!
+INFO 12-11 12:03:54 [custom_scheduler.py:420] Server is sleeping after 0.047 seconds.
+INFO 12-11 12:03:54 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:55 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:03:55 [custom_scheduler.py:425] Server is wakeup after 1.068 seconds.
+INFO 12-11 12:03:55 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b is awake
+INFO 12-11 12:03:55 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:55 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:55 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/llama3-3b to /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b
+INFO 12-11 12:03:57 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:03:57 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8500. Waiting for it to complete!
+INFO 12-11 12:03:57 [custom_scheduler.py:420] Server is sleeping after 0.057 seconds.
+INFO 12-11 12:03:57 [custom_scheduler.py:376] Executing wakeup for level 2
+INFO 12-11 12:03:58 [custom_scheduler.py:410] action wakeup is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:03:58 [custom_scheduler.py:425] Server is wakeup after 1.052 seconds.
+INFO 12-11 12:03:58 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:03:58 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:58 [custom_scheduler.py:227] New item for worker loop has arrived
+INFO 12-11 12:03:58 [custom_scheduler.py:251] Model /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b is awake
+INFO 12-11 12:03:58 [custom_scheduler.py:312] Task dispatched.
+INFO 12-11 12:03:59 [custom_scheduler.py:329] Closing the scheduler
+INFO 12-11 12:03:59 [custom_scheduler.py:151] Switching from /local/huzaifa/workspace/vLLM/vllm-serverless-optimization/models/qwen2.5-3b to None
+INFO 12-11 12:03:59 [custom_scheduler.py:390] Executing sleep level 2
+INFO 12-11 12:04:00 [custom_scheduler.py:410] action sleep is sent to http://127.0.0.1:8502. Waiting for it to complete!
+INFO 12-11 12:04:00 [custom_scheduler.py:420] Server is sleeping after 0.053 seconds.
 
                              Output tokens per second
-  900 +---------------------------------------------------------------------+
-      |                                           *                         |
-  800 |                                           *                         |
-      |                                           *                         |
-  700 |        *                       *          *                         |
-      |        *                       *          **          *             |
-  600 |        *                       *          **          **            |
-      | *   *  *                       *          **          **    *       |
-  500 | **  * **                       *      *   **          **    *       |
-      | *** * **                       **     *   **   * *    **    *       |
-      | *** * ***          *   *    *  **     *   **   * *    **    *       |
-  400 | *********          *   *    *  **  *  *   **   * *    **    *       |
-      | *********    *     **  *  * ** **  *  *   **   * ** * **    *    *  |
-  300 | **** ****  * * * ****  *  * ** **  *  **  **** * ** * **    ** ***  |
-      | **** ***** * ***********  ******** *********** ****** *** **** * *  |
-  200 | **** ***** * ***** *****  ******** *********** ******** * ** * * *  |
-      | * ** ******** **** * ** ******* *************** ******* **** * * *  |
-  100 |*  ** ******** **** * ** ******* **** **** ***** ******* **** * *  * |
-      |*  ** *** ** * * ** * ** *** * * **** * *  *****  *****  **** * *  * |
-    0 +---------------------------------------------------------------------+
-      0       20      40     60      80     100     120    140     160     180
+  1000 +--------------------------------------------------------------------+
+       |                      *                                             |
+   900 |                      *                                             |
+       |                      *                                             |
+   800 |                      *                                             |
+       |                      *                                             |
+   700 |                      *                                             |
+       |                      *                                             |
+   600 |**          *         *                                             |
+   500 |**          *         **             *              *               |
+       |***         *         **    **       *              *               |
+   400 |***   *    **  *     ***   ***       *              *               |
+       |***   *    **  *     ***   *** *     ** *           **              |
+   300 |***** *    **  *    ****** *** *     ** *    *     ***              |
+       |******* ** ****** * ****** *** *********** **** * ******            |
+   200 |******* ***************************************** ******            |
+       |******* **** ************************************ ******            |
+   100 |************ ************* * ** ***************** ******            |
+       |************ **** ** ***** * ** * ****** ******** *** **            |
+     0 +--------------------------------------------------------------------+
+       0             50           100          150           200           250
 
-                         Concurrent requests per second
-  5 +-----------------------------------------------------------------------+
-    |                                                         *             |
-    |                                                         *             |
-    |                                                         *             |
-  4 |***      *                                  **  **       *             |
-    |* *      *                                  **  **       *             |
-    |* *      *                                  **  **       **            |
-    |* *      *                                  **  **       **            |
-  3 |* *  * ***         *             *          **  **      * *     *****  |
-    |* *  * ***         *             *          **  **      * *     *   *  |
-    |  *  * ***         *             **        * *  * *     * *     *   *  |
-  2 |  ******** * ***   * *****       **   * ** * ** * ***   * ** ****   *  |
-    |  *** **** * * *  ** *** *      * *   * ** * ** * ***   * ** ****    * |
-    |  *** **** * * *  ** *** *      *  *  * ** * ****  **   * ** ****    * |
-    |  *** **** * * *  ** *** *      *  * ** ** * * **  **   * ** ***     * |
-  1 |  *** ******** ********* ********  ********* * **  ****** ******     * |
-    |      ***                 **        **             * * *  *    *     * |
-    |       **                  *        **             * * *  *    *     * |
-    |       **                  *        *              * * *  *    *     * |
-  0 +-----------------------------------------------------------------------+
-    0       20      40      60      80     100     120     140     160     180
+                          Concurrent requests per second
+    4 +---------------------------------------------------------------------+
+      |**                    *                                              |
+  3.5 |**                    *                                              |
+      |**                   **                                              |
+      |**                   **                                              |
+    3 |**  ***    ***       **                                              |
+      |**  ***    ***       **                                              |
+  2.5 |**  ** *   ***       * *                                             |
+      | *  ** *   ***       * *                                             |
+    2 | ***** *   ***    ** * *** *****   * ** *       ******  *            |
+      | ***** *   ****   ** * *** *****   * ** *       **  **  *            |
+      | ***** *   ****   ** * *** *****   * ** *       **  **  *            |
+  1.5 | ***** *   ****   ** * ***** ****  * ****       **  ** **            |
+      | ***** *   ****   ** * ***** ****  * ****       **  ** **            |
+    1 | ***** *************** ***** *********************  *****            |
+      |   * *        ***                 * *                *  *            |
+      |   * *        ***                 * *                *  *            |
+  0.5 |   * *        * *                 * *                *  *            |
+      |   * *        * *                 * *                *  *            |
+    0 +---------------------------------------------------------------------+
+      0             50           100           150           200           250
 ============ Serving Benchmark Result ============
-Successful requests:                     93        
-Benchmark duration (s):                  176.24    
-Total input tokens:                      1449297   
-Total generated tokens:                  33381     
-Request throughput (req/s):              0.53      
-Output token throughput (tok/s):         189.41    
-Peak output token throughput (tok/s):    888.00    
-Peak concurrent requests:                5.00      
-Total Token throughput (tok/s):          8412.77   
+Successful requests:                     100       
+Benchmark duration (s):                  204.97    
+Total input tokens:                      1145248   
+Total generated tokens:                  36625     
+Request throughput (req/s):              0.49      
+Output token throughput (tok/s):         178.68    
+Peak output token throughput (tok/s):    936.00    
+Peak concurrent requests:                4.00      
+Total Token throughput (tok/s):          5766.06   
 ---------------Time to First Token----------------
-Mean TTFT (ms):                          509.19    
-Median TTFT (ms):                        315.45    
-P95 TTFT (ms):                           1329.30   
-P99 TTFT (ms):                           2538.01   
+Mean TTFT (ms):                          422.53    
+Median TTFT (ms):                        231.56    
+P95 TTFT (ms):                           1211.97   
+P99 TTFT (ms):                           2784.24   
 -----Time per Output Token (excl. 1st token)------
-Mean TPOT (ms):                          8.03      
-Median TPOT (ms):                        4.09      
-P95 TPOT (ms):                           15.44     
-P99 TPOT (ms):                           52.61     
+Mean TPOT (ms):                          4.49      
+Median TPOT (ms):                        3.89      
+P95 TPOT (ms):                           8.71      
+P99 TPOT (ms):                           11.40     
 ---------------Inter-token Latency----------------
-Mean ITL (ms):                           5.08      
-Median ITL (ms):                         4.01      
-P95 ITL (ms):                            9.18      
-P99 ITL (ms):                            10.76     
+Mean ITL (ms):                           4.51      
+Median ITL (ms):                         3.83      
+P95 ITL (ms):                            7.23      
+P99 ITL (ms):                            8.39      
+==================================================
+
+
+========== Scheduler Timing Statistics ===========
+Total samples:                          100       
+Needed switches:                        68 (68.00%)
+----------------- Queue Time (s) -----------------
+Mean Queue Time (s):                    79.32     
+Median Queue Time (s):                  76.69     
+P95 Queue Time (s):                     155.48    
+P99 Queue Time (s):                     167.20    
+Max Queue Time (s):                     167.20    
+Requests without Queue Time (s):        0 (0.00%) 
+---------------- Wakeup Time (s) -----------------
+Mean Wakeup Time (s):                   0.96      
+Median Wakeup Time (s):                 1.05      
+P95 Wakeup Time (s):                    1.08      
+P99 Wakeup Time (s):                    1.08      
+Max Wakeup Time (s):                    1.08      
+Requests without Wakeup Time (s):       32 (32.00%)
+---------------- Sleep Time (ms) -----------------
+Mean Sleep Time (ms):                   53.58     
+Median Sleep Time (ms):                 53.88     
+P95 Sleep Time (ms):                    58.84     
+P99 Sleep Time (ms):                    60.57     
+Max Sleep Time (ms):                    62.59     
+Requests without Sleep Time (ms):       33 (33.00%)
+--------------- Inflight Time (s) ----------------
+Mean Inflight Time (s):                 2.01      
+Median Inflight Time (s):               1.75      
+P95 Inflight Time (s):                  4.93      
+P99 Inflight Time (s):                  7.61      
+Max Inflight Time (s):                  10.63     
+Requests without Inflight Time (s):     33 (33.00%)
+------------------ Queue Length ------------------
+Mean Queue Length:                      40.29     
+Median Queue Length:                    39.50     
+P95 Queue Length:                       75.05     
+P99 Queue Length:                       79.01     
+Max Queue Length:                       80.00     
 ==================================================
